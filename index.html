@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODELLER - Digital Product Agency</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .faq-answer {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .faq-answer[style*="max-height: 0"] {
+            opacity: 0;
+        }
+
+        .faq-answer[style*="max-height: 0px"] {
+            opacity: 0;
+        }
+
+        .faq-answer:not([style*="max-height: 0"]) {
+            opacity: 1;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .faq-icon.fa-chevron-up {
+            transform: rotate(180deg);
+        }
+
+        .faq-icon.fa-chevron-down {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <!-- Header -->
+    <header class="bg-dark-blue text-white">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">CODELLER</div>
+                <!-- <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="hover:text-light-blue transition-colors">Services</a>
+                    <a href="#" class="hover:text-light-blue transition-colors">About Us</a>
+                    <a href="#" class="hover:text-light-blue transition-colors">Our Work</a>
+                    <a href="#" class="hover:text-light-blue transition-colors">Free Resources</a>
+                    <a href="#" class="hover:text-light-blue transition-colors">Contact Us</a>
+                </nav> -->
+                <div class="text-sm"><a href="#"
+                        class="flex items-center gap-2 border border-white rounded-xs px-8 py-3 text-sm text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600">Schedule
+                        a Call
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_138_324" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="24" height="24">
+                                <rect width="24" height="24" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_138_324)">
+                                <path
+                                    d="M4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H16C16.55 4 17.0208 4.19583 17.4125 4.5875C17.8042 4.97917 18 5.45 18 6V10.5L21.15 7.35C21.3167 7.18333 21.5 7.14167 21.7 7.225C21.9 7.30833 22 7.46667 22 7.7V16.3C22 16.5333 21.9 16.6917 21.7 16.775C21.5 16.8583 21.3167 16.8167 21.15 16.65L18 13.5V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H4ZM4 18H16V6H4V18Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                    </a></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-dark-blue text-white pt-20 bg-hero-pattern bg-cover bg-center-bottom bg-no-repeat">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-[72px] font-bold mb-6 leading-[1.2] max-w-[960px] mx-auto">
+            <span class="typewriter block">Making ComplexProducts</span>
+            <span class="typewriter block delay">Simple & Beautiful</span>
+            </h1>
+            <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto text-gray-400 max-w-[925px]">
+                From luxury travel experiences to high-performance automotive products and niche eCommerce stores, our
+                agency has designed digital experiences that simplify complexity and delight users.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-blue text-dark px-8 py-4 text-sm min-w-[156px] rounded-xs hover:bg-white transition-colors flex items-center justify-center">
+                    See Pricing
+                </button>
+                <button
+                    class="bg-white text-dark px-8 py-4 text-sm min-w-[211px] rounded-xs hover:bg-dark hover:text-white transition-colors flex items-center justify-center">
+                    Book a Discovery Call
+                </button>
+            </div>
+        </div>
+        <p class="text-sm text-white mb-4 mt-[150px] text-center">Previously worked with</p>
+        <!-- Client Logos -->
+        <div class="flex justify-center items-center gap-12">
+            <img src="images/fj.svg" alt="brand-logo" />
+            <img src="images/midland.svg" alt="brand-logo" />
+            <img src="images/mxology.svg" alt="brand-logo" />
+            <img src="images/wldlfe.svg" alt="brand-logo" />
+            <img src="images/revo.svg" alt="brand-logo" />
+        </div>
+        <div class="mt-20"><img src="images/hero-img.png" alt="hero-img" class="w-full" /></div>
+
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section class="bg-dark py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between">
+                <h2 class="mb-12 max-w-[302px] text-white">Design That Drives Growth</h2>
+                <div class="max-w-[527px]">
+                    <p class="text-base text-gray-500">Past projects span luxury travel, automotive, and eCommerce
+                        brands, showing how our agency transforms
+                        complex products into simple, beautiful, and growth-driven digital experiences.</p>
+                    <div class="flex gap-4 mt-4">
+                        <button
+                            class="bg-white text-dark text-base flex-1 px-8 py-4 min-w-[211px] rounded-xs hover:bg-blue transition-colors flex gap-2 items-center justify-center font-medium">
+                            See Pricing
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_138_340" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="24" height="24">
+                                    <rect width="24" height="24" fill="currentColor" />
+                                </mask>
+                                <g mask="url(#mask0_138_340)">
+                                    <path
+                                        d="M16.1749 13.0008H4.99988C4.71654 13.0008 4.47904 12.905 4.28738 12.7133C4.09571 12.5217 3.99988 12.2842 3.99988 12.0008C3.99988 11.7175 4.09571 11.48 4.28738 11.2883C4.47904 11.0967 4.71654 11.0008 4.99988 11.0008H16.1749L11.2749 6.10084C11.0749 5.90084 10.979 5.66751 10.9874 5.40084C10.9957 5.13418 11.0999 4.90084 11.2999 4.70084C11.4999 4.51751 11.7332 4.42168 11.9999 4.41334C12.2665 4.40501 12.4999 4.50084 12.6999 4.70084L19.2999 11.3008C19.3999 11.4008 19.4707 11.5092 19.5124 11.6258C19.554 11.7425 19.5749 11.8675 19.5749 12.0008C19.5749 12.1342 19.554 12.2592 19.5124 12.3758C19.4707 12.4925 19.3999 12.6008 19.2999 12.7008L12.6999 19.3008C12.5165 19.4842 12.2874 19.5758 12.0124 19.5758C11.7374 19.5758 11.4999 19.4842 11.2999 19.3008C11.0999 19.1008 10.9999 18.8633 10.9999 18.5883C10.9999 18.3133 11.0999 18.0758 11.2999 17.8758L16.1749 13.0008Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </button>
+                        <button
+                            class="bg-white text-dark text-base flex-1 px-8 py-4 min-w-[211px] rounded-xs hover:bg-blue transition-colors flex gap-2 justify-center font-medium">
+                            More Case Studies
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_138_340" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="24" height="24">
+                                    <rect width="24" height="24" fill="currentColor" />
+                                </mask>
+                                <g mask="url(#mask0_138_340)">
+                                    <path
+                                        d="M16.1749 13.0008H4.99988C4.71654 13.0008 4.47904 12.905 4.28738 12.7133C4.09571 12.5217 3.99988 12.2842 3.99988 12.0008C3.99988 11.7175 4.09571 11.48 4.28738 11.2883C4.47904 11.0967 4.71654 11.0008 4.99988 11.0008H16.1749L11.2749 6.10084C11.0749 5.90084 10.979 5.66751 10.9874 5.40084C10.9957 5.13418 11.0999 4.90084 11.2999 4.70084C11.4999 4.51751 11.7332 4.42168 11.9999 4.41334C12.2665 4.40501 12.4999 4.50084 12.6999 4.70084L19.2999 11.3008C19.3999 11.4008 19.4707 11.5092 19.5124 11.6258C19.554 11.7425 19.5749 11.8675 19.5749 12.0008C19.5749 12.1342 19.554 12.2592 19.5124 12.3758C19.4707 12.4925 19.3999 12.6008 19.2999 12.7008L12.6999 19.3008C12.5165 19.4842 12.2874 19.5758 12.0124 19.5758C11.7374 19.5758 11.4999 19.4842 11.2999 19.3008C11.0999 19.1008 10.9999 18.8633 10.9999 18.5883C10.9999 18.3133 11.0999 18.0758 11.2999 17.8758L16.1749 13.0008Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark-gray text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col gap-6">
+            <div class="flex flex-wrap gap-6">
+                <!-- First row - 3 equal cards -->
+                <div class="overflow-hidden flex flex-col w-2/5">
+                    <div class="relative flex flex-col flex-1">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
+                            alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <i class="fas fa-arrow-right text-dark-gray"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-white mt-4">
+                        <h3 class="text-xl font-medium mb-1">Project Name</h3>
+                        <p class="text-white text-base">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden relative flex flex-col w-1/4">
+                    <div class="relative flex flex-col flex-1">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
+                            alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <i class="fas fa-arrow-right text-dark-gray"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-white mt-4">
+                        <h3 class="text-xl font-medium mb-1">Project Name</h3>
+                        <p class="text-white text-base">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden relative flex flex-col w-1/4">
+                    <div class="relative flex flex-col flex-1">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
+                            alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <i class="fas fa-arrow-right text-dark-gray"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-white mt-4">
+                        <h3 class="text-xl font-medium mb-1">Project Name</h3>
+                        <p class="text-white text-base">UI/UX Design</p>
+                    </div>
+                </div>
+
+                <!-- Second row - 1 tall card + 2 regular cards -->
+
+            </div>
+            <div class="flex flex-wrap gap-6">
+                <!-- First row - 3 equal cards -->
+                <div class="overflow-hidden relative flex flex-col w-1/4">
+                    <div class="relative flex flex-col flex-1">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
+                            alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <i class="fas fa-arrow-right text-dark-gray"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-white mt-4">
+                        <h3 class="text-xl font-medium mb-1">Project Name</h3>
+                        <p class="text-white text-base">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden relative flex flex-col w-1/4">
+                    <div class="relative flex flex-col flex-1">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
+                            alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <i class="fas fa-arrow-right text-dark-gray"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-white mt-4">
+                        <h3 class="text-xl font-medium mb-1">Project Name</h3>
+                        <p class="text-white text-base">UI/UX Design</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden flex flex-col w-2/5">
+                    <div class="relative flex flex-col flex-1">
+                        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
+                            alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <i class="fas fa-arrow-right text-dark-gray"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-white mt-4">
+                        <h3 class="text-xl font-medium mb-1">Project Name</h3>
+                        <p class="text-white text-base">UI/UX Design</p>
+                    </div>
+                </div>
+                <!-- Second row - 1 tall card + 2 regular cards -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Help Section -->
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-extrabold text-center mb-16 text-dark">How We Help Transform Your
+                Product</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-dark-gray">User-Centered Design That Converts</h3>
+                    <p class="text-gray-600 text-sm font-light">We create designs that put your users first, resulting
+                        in higher
+                        conversion rates and better user satisfaction.</p>
+                </div>
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-dark-gray">End-to-End Digital Expertise</h3>
+                    <p class="text-gray-600 text-sm font-light">From concept to launch, we handle every aspect of your
+                        digital product
+                        development with precision and care.</p>
+                </div>
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-dark-gray">AI-Enhanced Insights for Smarter Design</h3>
+                    <p class="text-gray-600 text-sm font-light">We leverage AI tools and data analytics to make informed
+                        design decisions
+                        that drive real business results.</p>
+                </div>
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-dark-gray">Design That Aligns With Business Growth</h3>
+                    <p class="text-gray-600 text-sm font-light">Every design decision we make is strategically aligned
+                        with your business
+                        goals and growth objectives.</p>
+                </div>
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-dark-gray">Rapid Iteration Without Compromise</h3>
+                    <p class="text-gray-600 text-sm font-light">We move fast and iterate quickly while maintaining the
+                        highest quality
+                        standards in every deliverable.</p>
+                </div>
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mx-auto mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-dark-gray">Custom Solutions for Every Brand</h3>
+                    <p class="text-gray-600 text-sm font-light">No cookie-cutter solutions here. We create unique,
+                        tailored experiences
+                        that reflect your brand's personality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Mega-list -->
+    <section class="bg-white py-12 border-t border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-4 lg:gap-12 lg:divide-x lg:divide-gray-200 lg:-mx-8">
+                <!-- Col 1 -->
+                <div class="lg:px-8">
+                    <h3 class="text-dark text-lg font-bold mb-6">Design Services</h3>
+                    <ul class="space-y-4 text-sm text-text-gray-600">
+                        <li><a href="#" class="hover:text-light-blue transition-colors">UX/UI Design</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Website Design</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Illustration & Icons</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Animation & Motion Graphics</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Branding & Logos</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Marketing Collateral</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="lg:px-8">
+                    <h3 class="text-dark text-lg font-bold mb-6">Strategy & Planning</h3>
+                    <ul class="space-y-4 text-sm text-text-gray-600">
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Design Workshops</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">User Studies & Research</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">User Journeys & Personas</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Competitor Analysis</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">UX Audits</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Roadmapping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="lg:px-8">
+                    <h3 class="text-dark text-lg font-bold mb-6">Systemize</h3>
+                    <ul class="space-y-4 text-sm text-text-gray-600">
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Design Systems</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">UI Kit Development</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Tailwind CSS</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">ShopWired</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Shopify</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">WordPress</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="lg:px-8">
+                    <h3 class="text-dark text-lg font-bold mb-6">Custom Development</h3>
+                    <ul class="space-y-4 text-sm text-text-gray-600">
+                        <li><a href="#" class="hover:text-light-blue transition-colors">HTML/CSS</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">JavaScript / jQuery</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">PHP & Laravel</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">eCommerce Development</a></li>
+                        <li><a href="#" class="hover:text-light-blue transition-colors">Web Design & Development</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA: Ready to scale -->
+    <section class="bg-ink py-8 md:py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-white font-extrabold text-3xl md:text-5xl mb-2">Ready to scale your business?</h2>
+            <p class="text-white text-base md:text-lg mb-6">Start with a risk‑free trial or choose 30‑day service.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#"
+                    class="inline-flex items-center justify-center rounded-xs bg-white text-dark px-6 md:px-8 py-3 md:py-4 text-sm md:text-base shadow-sm hover:bg-blue hover:text-white transition">
+                    Pricing Plans
+                    <svg class="ml-3 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class="inline-flex items-center justify-center rounded-xs border border-white/60 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-base hover:bg-white/10 transition">
+                    7 Day Free Trial
+                    <svg class="ml-3 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose Codeller Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-white text-center mb-6">Why Choose Codeller?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div>
+                    <div class="overflow-hidden rounded-xs mb-4 aspect-video">
+                        <img src="https://demo.awaikenthemes.com/weebix/wp-content/uploads/2024/04/service-img-1.jpg"class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">Dedicated design teams</h3>
+                    <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div>
+                    <div class="overflow-hidden rounded-xs mb-4 aspect-video">
+                        <img src="https://demo.awaikenthemes.com/weebix/wp-content/uploads/2024/04/service-img-2.jpg"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">Fast, reliable delivery</h3>
+                    <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div>
+                    <div class="overflow-hidden rounded-xs mb-4 aspect-video">
+                        <img src="https://demo.awaikenthemes.com/weebix/wp-content/uploads/2024/04/service-img-3.jpg"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">Budget friendly</h3>
+                    <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div>
+                    <div class="overflow-hidden rounded-xs mb-4 aspect-video">
+                        <img src="https://demo2.themelexus.com/konsulix/wp-content/uploads/2024/03/case1-1024x670.jpg"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">No hiring headaches</h3>
+                    <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div>
+                    <div class="overflow-hidden rounded-xs mb-4 aspect-video">
+                        <img src="https://demo2.themelexus.com/konsulix/wp-content/uploads/2024/03/case11-1024x683.jpg"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">Full ownership guaranteed</h3>
+                    <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div>
+                    <div class="overflow-hidden rounded-xs mb-4 aspect-video">
+                        <img src="https://itqore.themeht.com/wp-content/uploads/2025/07/service08-700x600.jpg"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">No contract, cancel anytime</h3>
+                    <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between">
+                <h2 class="font-extrabold mb-12 ">Have questions?</h2>
+                <div class="max-w-3xl">
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(0)">
+                            <span class="text-lg ">Do you only work with large brands, or start ups too?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-0"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-0" style="max-height: 0;">
+                            <p class="">We work with businesses of all sizes, from startups to enterprise companies. Our
+                                approach is tailored to each client's specific needs and budget.</p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(1)">
+                            <span class="text-lg ">Can you help make my product investor-ready?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-1"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-1" style="max-height: 0;">
+                            <p class="">Absolutely! We specialize in creating polished, professional designs that help
+                                startups and growing companies present their products effectively to investors. Our
+                                designs
+                                communicate value, usability, and market potential.</p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(2)">
+                            <span class="text-lg ">How does your agency integrate AI into design?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-2"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-2" style="max-height: 0;">
+                            <p>We use AI tools for user research, design optimization, and data analysis to create more
+                                effective designs. AI helps us understand user behavior patterns and optimize conversion
+                                rates.</p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(3)">
+                            <span class="text-lg">How long does a typical design project take?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-3"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-3" style="max-height: 0;">
+                            <p>Project timelines vary based on scope and complexity. A typical UI/UX project takes 4-8
+                                weeks, while a complete brand and web project can take 8-12 weeks. We provide detailed
+                                timelines during our discovery phase.</p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(4)">
+                            <span class="text-lg">Do you offer ongoing support after launch?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-4"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-4" style="max-height: 0;">
+                            <p>Yes, we offer ongoing support and maintenance packages to help you iterate, improve, and
+                                scale your product after launch. We're here for the long term.</p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(5)">
+                            <span class="text-lg">Will I have full ownership of the designs and assets?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-5"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-5" style="max-height: 0;">
+                            <p>Absolutely. You retain full ownership of all designs, code, and assets we create for your
+                                project. We provide all source files and documentation upon project completion.</p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(6)">
+                            <span class="text-lg">How do you approach working with technical or niche products?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-6"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-6" style="max-height: 0;">
+                            <p>We take time to understand your technical domain and work closely with your team to
+                                ensure
+                                our designs accurately represent complex functionality while maintaining usability.</p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-600 py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(7)">
+                            <span class="text-lg">What makes your agency different from other design firms?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-7"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-7" style="max-height: 0;">
+                            <p>Our combination of user-centered design, business strategy, and technical expertise sets
+                                us
+                                apart. We focus on measurable results and long-term partnerships rather than just
+                                beautiful
+                                designs.</p>
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <button
+                            class="w-full text-left flex justify-between items-center hover:text-light-blue transition-colors"
+                            onclick="toggleFAQ(8)">
+                            <span class="text-lg">How do we get started with a project?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform duration-300" id="icon-8"></i>
+                        </button>
+                        <div class="faq-answer mt-4 text-gray-300 overflow-hidden transition-all duration-300 ease-in-out"
+                            id="answer-8" style="max-height: 0;">
+                            <p>Start with a free discovery call where we'll discuss your project goals, timeline, and
+                                budget. From there, we'll create a detailed proposal and project plan tailored to your
+                                needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="bg-dark text-white py-20">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <h2 class="font-bold mb-3">Choose the plan that's right for your business</h2>
+                <p class="text-gray-500 text-base font-light max-w-5xl mx-auto">Need the certainty of a fixed cost? Or
+                    the flexibility of a subscription? Our transparent pricing lets you choose the perfect fit for your
+                    project.</p>
+            </div>
+
+            <!-- Pricing Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+                <!-- Included as Standard Column -->
+                <div class="bg-ink p-6">
+                    <h3 class="text-2xl font-bold mb-6">Included as Standard</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                            <span class="text-base font-light">Flat monthly rates - no contracts, no surprises</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                            <span class="text-base font-light">Cost-effective alternative to hiring in-house</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                            <span class="text-base font-light">Dedicated Project Manager</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                            <span class="text-base font-light">Dedicated Customer Success Manager</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-2"></i>
+                            <span class="text-base font-light">Unlimited Revisions</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-2"></i>
+                            <span class="text-base font-light">Avg. 48 Hour Delivery</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-2"></i>
+                            <span class="text-base font-light">Global Timezone Coverage</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-2"></i>
+                            <span class="text-base font-light">AI-enhanced services</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-2"></i>
+                            <span class="text-base font-light">Support for multiple brands</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-2"></i>
+                            <span class="text-base font-light">Social, print, web, ads, packaging & more</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-white">
+                            <i class="fas fa-check flex-shrink-0 relative top-2"></i>
+                            <span class="text-base font-light">World-class design, made affordable</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Design Subscription Column -->
+                <div class="p-6 border border-[#5C666B]">
+                    <h3 class="text-2xl font-bold mb-4">Design Subscription</h3>
+                    <p class="text-white text-base font-light">Get a website that delivers an exceptional user
+                        experience, driving results and propelling your business forward.</p>
+                    <div class="border-b border-[#3B454A] my-4"></div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">£3,500</span>
+                        <span class="text-white font-light text-2xl">/per month</span>
+                    </div>
+                    <button
+                        class="w-full bg-white text-gray-900 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                        Get Started
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="border-b border-[#3B454A] my-4"></div>
+                    <div>
+                        <h4 class="text-base font-light mb-4 font-body">What's included</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">Transparent flat monthly rate</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">Source files included (Figma, PSD, AI, etc.)</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">Brand-aligned, pixel-perfect designs</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">Original designs - no templates, no shortcuts</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Design & Development Column -->
+                <div class="p-6 border border-[#5C666B]">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-semibold">Save £500</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Design & Development</h3>
+                    <p class="text-white text-base font-light">Get a website that delivers an exceptional user
+                        experience, driving results and propelling your business forward.</p>
+                    <div class="border-b border-[#3B454A] my-4"></div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">£6,500</span>
+                        <span class="text-white font-light text-2xl">/per month</span>
+                    </div>
+                    <button
+                        class="w-full bg-white text-gray-900 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                        Get Started
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="border-b border-[#3B454A] my-4"></div>
+                    <div>
+                        <h4 class="text-base font-light mb-4 font-body">What's included</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">Seamless handoff - smoother, faster delivery</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">Fully responsive websites</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">End-to-end project ownership</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-white">
+                                <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
+                                <span class="font-light text-base">Automated testing & bug fixes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Blocks -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-white">Pause Anytime. Keep Unused Credits.</h3>
+                    <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Duis augue sem, gravida sed risus eget, tempor mattis nisi. Proin iaculis cursus ante non
+                        posuere. Mauris nec magna et orci.</p>
+                </div>
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-white">7-Day Money Back Guarantee</h3>
+                    <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Duis augue sem, gravida sed risus eget, tempor mattis nisi. Proin iaculis cursus ante non
+                        posuere. Mauris nec magna et orci.</p>
+                </div>
+                <div class="">
+                    <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
+                    <h3 class="text-lg font-bold mb-3 text-white">100% Satisfaction Guaranteed</h3>
+                    <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Duis augue sem, gravida sed risus eget, tempor mattis nisi. Proin iaculis cursus ante non
+                        posuere. Mauris nec magna et orci.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Enquiry Section -->
+    <section class="bg-dark text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex items-start gap-10 justify-between">
+                <!-- Left Column - Information -->
+                <div class="max-w-[519px]">
+                    <div>
+                        <h2 class="font-extrabold mb-4 text-3xl leading-relaxed">Enhance Your Brand Potential At No
+                            Cost!</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</p>
+                    </div>
+
+                    <div class="space-y-3 my-4">
+                        <div class="flex items-start gap-2">
+                            <div class="flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-regular fa-circle-check text-white text-lg"></i>
+                            </div>
+                            <span class="text-gray-300 text-base">Expert advice worth $799 at no cost</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-regular fa-circle-check text-white text-base"></i>
+                            </div>
+                            <span class="text-gray-300 text-base">We'll respond to you within 24 hours</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <div class="flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-regular fa-circle-check text-white text-base"></i>
+                            </div>
+                            <span class="text-gray-300 text-base">We're happy to sign an NDA if necessary</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="w-[190px] h-[190px] bg-gray-600 rounded-lg flex-shrink-0 mb-2"></div>
+                        <div>
+                            <h4 class="text-white text-lg font-medium mb-1">Joshua Newell</h4>
+                            <p class="text-white text-base">Founder</p>
+                            <div class="flex items-center gap-2 mt-3">
+                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 9.12207C16 7.17207 15.3208 5.5179 13.9625 4.15957C12.6042 2.80124 10.95 2.12207 9 2.12207V0.12207C10.25 0.12207 11.4208 0.35957 12.5125 0.83457C13.6042 1.30957 14.5542 1.95124 15.3625 2.75957C16.1708 3.5679 16.8125 4.5179 17.2875 5.60957C17.7625 6.70124 18 7.87207 18 9.12207H16ZM12 9.12207C12 8.28874 11.7083 7.5804 11.125 6.99707C10.5417 6.41374 9.83333 6.12207 9 6.12207V4.12207C10.3833 4.12207 11.5625 4.60957 12.5375 5.58457C13.5125 6.55957 14 7.73874 14 9.12207H12ZM16.95 18.1221C14.8667 18.1221 12.8083 17.6679 10.775 16.7596C8.74167 15.8512 6.89167 14.5637 5.225 12.8971C3.55833 11.2304 2.27083 9.3804 1.3625 7.34707C0.454167 5.31374 0 3.2554 0 1.17207C0 0.87207 0.1 0.62207 0.3 0.42207C0.5 0.22207 0.75 0.12207 1.05 0.12207H5.1C5.33333 0.12207 5.54167 0.201237 5.725 0.35957C5.90833 0.517904 6.01667 0.705404 6.05 0.92207L6.7 4.42207C6.73333 4.68874 6.725 4.91374 6.675 5.09707C6.625 5.2804 6.53333 5.43874 6.4 5.57207L3.975 8.02207C4.30833 8.63874 4.70417 9.23457 5.1625 9.80957C5.62083 10.3846 6.125 10.9387 6.675 11.4721C7.19167 11.9887 7.73333 12.4679 8.3 12.9096C8.86667 13.3512 9.46667 13.7554 10.1 14.1221L12.45 11.7721C12.6 11.6221 12.7958 11.5096 13.0375 11.4346C13.2792 11.3596 13.5167 11.3387 13.75 11.3721L17.2 12.0721C17.4333 12.1387 17.625 12.2596 17.775 12.4346C17.925 12.6096 18 12.8054 18 13.0221V17.0721C18 17.3721 17.9 17.6221 17.7 17.8221C17.5 18.0221 17.25 18.1221 16.95 18.1221ZM3.025 6.12207L4.675 4.47207L4.25 2.12207H2.025C2.10833 2.8054 2.225 3.4804 2.375 4.14707C2.525 4.81374 2.74167 5.47207 3.025 6.12207ZM11.975 15.0721C12.625 15.3554 13.2875 15.5804 13.9625 15.7471C14.6375 15.9137 15.3167 16.0221 16 16.0721V13.8721L13.65 13.3971L11.975 15.0721Z"
+                                        fill="currentColor" />
+                                </svg>
+
+                                <span class="text-white font-light">+44 1902 843 2723</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Enquiry Form -->
+                <div class="max-w-[658px] w-full">
+                    <form class="space-y-4">
+
+                        <!-- Enquiry Subject -->
+                        <div>
+                            <label class="block text-white text-sm font-medium mb-2">Name</label>
+                            <input type="text" value="johndoe" class="input-global">
+                        </div>
+
+                        <!-- Email and Telephone Row -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Email Field -->
+                            <div>
+                                <label class="block text-white text-sm font-medium mb-2">Your Email</label>
+                                <input type="email" value="john@doe.com" class="input-global">
+                            </div>
+
+                            <!-- Telephone Number -->
+                            <div>
+                                <label class="block text-white text-sm font-medium mb-2">Telephone Number</label>
+                                <div class="relative">
+                                    <div
+                                        class="telephone-container flex items-center bg-dark border border-[#5C666B] rounded-md overflow-hidden">
+                                        <select
+                                            class="select-global border-0 rounded-none bg-transparent focus:ring-0 focus:outline-none appearance-none cursor-pointer flex-shrink-0"
+                                            style="width: auto; min-width: 80px;">
+                                            <option value="+44">+44</option>
+                                            <option value="+1">+1</option>
+                                            <option value="+33">+33</option>
+                                        </select>
+                                        <div class="w-px h-8 bg-gray-500"></div>
+                                        <input type="tel" value="1902 843 2723"
+                                            class="input-global border-0 rounded-none bg-transparent focus:ring-0 focus:outline-none flex-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Enquiry Subject -->
+                        <div>
+                            <label class="block text-white text-sm font-medium mb-2">Enquiry Subject</label>
+                            <select class="select-global">
+                                <option value="website-design">Website Design</option>
+                                <option value="branding">Branding</option>
+                                <option value="development">Development</option>
+                                <option value="consultation">Consultation</option>
+                            </select>
+                        </div>
+
+                        <!-- Project Budget -->
+                        <div>
+                            <label class="block text-white text-sm font-medium mb-2">Project Budget</label>
+                            <select class="select-global">
+                                <option value="less-than-5k">Less than £5k</option>
+                                <option value="5k-10k">£5k - £10k</option>
+                                <option value="10k-25k">£10k - £25k</option>
+                                <option value="25k-plus">£25k+</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label class="block text-white text-sm font-medium mb-2">Message</label>
+                            <textarea rows="4" class="input-global">I want to redesign my website...</textarea>
+                        </div>
+
+                        <!-- Send Enquiry Button -->
+                        <button type="submit"
+                            class="bg-white text-gray-900 py-4 px-10 rounded-xs hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                            Send Enquiry
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="relative bg-cover bg-center" style="background-image: url('data:image/svg+xml,<svg xmlns=\"
+        http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 800\">
+        <rect fill=\"%23000\" width=\"1200\" height=\"800\" />
+        <circle fill=\"%23333\" cx=\"200\" cy=\"200\" r=\"100\" />
+        <rect fill=\"%23444\" x=\"400\" y=\"150\" width=\"200\" height=\"300\" />
+        <circle fill=\"%23555\" cx=\"800\" cy=\"300\" r=\"80\" /></svg>');">
+        <div class="absolute inset-0 bg-dark-gray bg-opacity-90"></div>
+        <div class="relative z-10 py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                    <!-- Logo and Contact Form -->
+                    <div class="lg:col-span-2">
+                        <div class="text-2xl font-bold mb-8 ">CODELLER</div>
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold mb-4 ">Want to get involved? Or just having a query?</h3>
+                            <p class="text-gray-300 mb-6 ">Get in touch with us to discuss your project and see how we
+                                can help transform your digital product.</p>
+                            <div class="space-y-4">
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <input type="text" placeholder="First Name"
+                                        class="bg-gray-700 text-white px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-light-blue">
+                                    <input type="text" placeholder="Last Name"
+                                        class="bg-gray-700 text-white px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-light-blue">
+                                </div>
+                                <div class="flex gap-4">
+                                    <input type="email" placeholder="Email Address"
+                                        class="flex-1 bg-gray-700 text-white px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-light-blue">
+                                    <button
+                                        class="bg-light-blue text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors flex items-center">
+                                        Subscribe
+                                        <i class="fas fa-arrow-right ml-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Column -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 ">Services</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li><a href="#" class="hover:text-white transition-colors">UI/UX Design</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Brand Design</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Website Development</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">eCommerce Development</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Responsive Development</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Column -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 ">Company</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold mb-4 ">Get In Touch</h4>
+                            <div class="space-y-2 text-gray-300">
+                                <div>hello@codeller.com</div>
+                                <div>+44 1902 410 109</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media and Copyright -->
+                <div class="border-t border-gray-600 mt-12 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="flex space-x-4 mb-4 md:mb-0">
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fab fa-instagram text-xl"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fab fa-dribbble text-xl"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fab fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fab fa-twitter text-xl"></i></a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fab fa-facebook text-xl"></i></a>
+                        </div>
+                        <div class="text-gray-400 text-sm">Copyright ©2023 Codeller. All Rights Reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(index) {
+            const answer = document.getElementById(`answer-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+
+            // Check if current item is open
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '0';
+
+            // Close all other FAQ items
+            for (let i = 0; i < 9; i++) {
+                if (i !== index) {
+                    const otherAnswer = document.getElementById(`answer-${i}`);
+                    const otherIcon = document.getElementById(`icon-${i}`);
+                    if (otherAnswer && otherIcon) {
+                        otherAnswer.style.maxHeight = '0';
+                        otherIcon.classList.remove('fa-chevron-up', 'text-light-blue');
+                        otherIcon.classList.add('fa-chevron-down');
+                    }
+                }
+            }
+
+            // Toggle current FAQ item
+            if (!isOpen) {
+                // Open the FAQ item
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up', 'text-light-blue');
+            } else {
+                // Close the FAQ item
+                answer.style.maxHeight = '0';
+                icon.classList.remove('fa-chevron-up', 'text-light-blue');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+    </script>
+</body>
+
+</html>

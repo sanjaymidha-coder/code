@@ -1,0 +1,20 @@
+{
+  "name": "codeller-landing",
+  "version": "1.0.0",
+  "description": "CODELLER Digital Product Agency Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": [
+    "landing-page",
+    "tailwindcss",
+    "responsive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
