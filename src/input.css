@@ -124,18 +124,18 @@
     border-right: 3px solid #fff;
     width: 0;
     display: inline-block;
-    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end 6 forwards;
   }
   
   .typewriter.delay {
-    animation-delay: 3.5s; /* Wait until first finishes */
+    animation-delay: 3.5s, 3.5s; /* Delay both animations equally */
     animation-fill-mode: both;
   }
   
   /* Typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 100%; border-right-width: 0; }
   }
   
   /* Blinking cursor */
