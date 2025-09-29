@@ -1310,57 +1310,11 @@
         </div>
 
     </footer>
+    <!-- Local Lenis -->
+    <script src="./src/js/lenis.min.js"></script>
 
-    <script>
-        function toggleFAQ(index) {
-            const answer = document.getElementById(`answer-${index}`);
-            const icon = document.getElementById(`icon-${index}`);
-            const circle = document.getElementById(`circle-${index}`);
-
-            // Check if current item is open
-            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '0';
-
-            // Close all other FAQ items
-            for (let i = 0; i < 9; i++) {
-                if (i !== index) {
-                    const otherAnswer = document.getElementById(`answer-${i}`);
-                    const otherIcon = document.getElementById(`icon-${i}`);
-                    const otherCircle = document.getElementById(`circle-${i}`);
-                    if (otherAnswer && otherIcon) {
-                        otherAnswer.style.maxHeight = '0';
-                        otherIcon.classList.remove('open', 'text-dark');
-                        otherIcon.classList.add('text-white');
-                        if (otherCircle) {
-                            otherCircle.classList.remove('bg-blue', 'text-dark');
-                            otherCircle.classList.add('bg-ink', 'text-white');
-                        }
-                    }
-                }
-            }
-
-            // Toggle current FAQ item
-            if (!isOpen) {
-                // Open the FAQ item
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.classList.add('open');
-                icon.classList.remove('text-white');
-                icon.classList.add('text-dark');
-                if (circle) {
-                    circle.classList.remove('bg-ink', 'text-white');
-                    circle.classList.add('bg-blue', 'text-dark');
-                }
-            } else {
-                // Close the FAQ item
-                answer.style.maxHeight = '0';
-                icon.classList.remove('open', 'text-dark');
-                icon.classList.add('text-white');
-                if (circle) {
-                    circle.classList.remove('bg-blue', 'text-dark');
-                    circle.classList.add('bg-ink', 'text-white');
-                }
-            }
-        }
-    </script>
+    <!-- Site Scripts (plain) -->
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>
