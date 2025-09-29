@@ -61,7 +61,7 @@
   }
   
   .select-global option {
-    @apply bg-dark text-gray-500;
+    @apply bg-white text-gray-500;
   }
   
   /* Special styles for telephone number field */
@@ -83,6 +83,10 @@
 
 /* Global font application */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     font-family: 'Roboto', sans-serif;
     color: #fff;
@@ -93,8 +97,8 @@
   }
   
   h2 {
-    font-size: 40px;
-    line-height: 1.4;
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.5rem);
+    line-height: 1.3;
     font-weight: 800; /* extrabold */
   }
 }
