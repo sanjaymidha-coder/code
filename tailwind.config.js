@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{html,js}"],
+content: [
+  "./public/**/*.{html,js}", // Vercel serves from public/
+  "./src/**/*.{html,js}"     // if you ever add src components
+],
   safelist: [
     'input-global',
     'select-global'
