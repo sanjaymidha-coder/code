@@ -1121,7 +1121,7 @@
                         <!-- Enquiry Subject -->
                         <div>
                             <label class="block text-white text-sm font-medium mb-2">Name</label>
-                            <input type="text" value="johndoe" class="input-global">
+                            <input type="text" class="input-global">
                         </div>
 
                         <!-- Email and Telephone Row -->
@@ -1129,7 +1129,7 @@
                             <!-- Email Field -->
                             <div>
                                 <label class="block text-white text-sm font-medium mb-2">Your Email</label>
-                                <input type="email" value="john@doe.com" class="input-global">
+                                <input type="email" class="input-global">
                             </div>
 
                             <!-- Telephone Number -->
@@ -1139,14 +1139,15 @@
                                     <div
                                         class="telephone-container flex items-center bg-dark border border-[#5C666B] rounded-md overflow-hidden">
                                         <select
-                                            class="select-global border-0 rounded-none bg-transparent focus:ring-0 focus:outline-none appearance-none cursor-pointer flex-shrink-0"
+                                            class="select-global  flex-shrink-0"
                                             style="width: auto; min-width: 80px;">
+                                            <option value="" selected disabled hidden></option>
                                             <option value="+44">+44</option>
                                             <option value="+1">+1</option>
                                             <option value="+33">+33</option>
                                         </select>
                                         <div class="w-px h-8 bg-gray-500"></div>
-                                        <input type="tel" value="1902 843 2723"
+                                        <input type="tel"
                                             class="input-global border-0 rounded-none bg-transparent focus:ring-0 focus:outline-none flex-1">
                                     </div>
                                 </div>
@@ -1157,6 +1158,7 @@
                         <div>
                             <label class="block text-white text-sm font-medium mb-2">Enquiry Subject</label>
                             <select class="select-global">
+                                <option value="" selected disabled hidden></option>
                                 <option value="website-design">Website Design</option>
                                 <option value="branding">Branding</option>
                                 <option value="development">Development</option>
@@ -1168,6 +1170,7 @@
                         <div>
                             <label class="block text-white text-sm font-medium mb-2">Project Budget</label>
                             <select class="select-global">
+                                <option value="" selected disabled hidden></option>
                                 <option value="less-than-5k">Less than £5k</option>
                                 <option value="5k-10k">£5k - £10k</option>
                                 <option value="10k-25k">£10k - £25k</option>
@@ -1178,7 +1181,7 @@
                         <!-- Message -->
                         <div>
                             <label class="block text-white text-sm font-medium mb-2">Message</label>
-                            <textarea rows="4" class="input-global">I want to redesign my website...</textarea>
+                            <textarea rows="4" class="input-global"></textarea>
                         </div>
 
                         <!-- Send Enquiry Button -->
