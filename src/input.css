@@ -34,6 +34,22 @@
 
 /* Custom component styles */
 @layer components {
+  /* Sticky header styles */
+  .header-sticky-placeholder { height: var(--header-height, 72px); }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+    will-change: transform;
+  }
+
+  .site-header.is-hidden { transform: translateY(-100%); }
+  .site-header.is-stuck {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    backdrop-filter: saturate(140%) blur(6px);
+  }
   .btn-primary {
     @apply bg-light-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center;
   }
@@ -129,7 +145,6 @@
     margin-top: 12px;
   }
 
-
   
   .faq-icon {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -186,5 +201,6 @@
     width: 100%;
   }
 }
+
 
 

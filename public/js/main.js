@@ -91,6 +91,43 @@ function initClientLogosSlider() {
 document.addEventListener('DOMContentLoaded', function () {
     // Try to initialize once loaded
     initClientLogosSlider();
+    // Sticky header behavior
+    (function initStickyHeader(){
+        const header = document.getElementById('site-header');
+        if (!header) return;
+        // Enhance class list for styling without changing HTML structure
+        header.classList.add('site-header');
+        const headerHeight = header.offsetHeight || 72;
+        document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+
+        let lastY = window.scrollY;
+        let ticking = false;
+
+        function onScroll(){
+            const y = window.scrollY;
+            const goingDown = y > lastY;
+            if (y > 10) {
+                header.classList.add('is-stuck');
+            } else {
+                header.classList.remove('is-stuck');
+            }
+            if (y > headerHeight) {
+                // Show when scrolling down, hide when scrolling up
+                header.classList.toggle('is-hidden', !goingDown);
+            } else {
+                header.classList.remove('is-hidden');
+            }
+            lastY = y;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function(){
+            if (!ticking){
+                window.requestAnimationFrame(onScroll);
+                ticking = true;
+            }
+        }, { passive: true });
+    })();
     // Toggle filled state for inputs, textareas and selects
     function updateFilled(el) {
         const tag = el.tagName;
