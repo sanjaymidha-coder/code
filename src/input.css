@@ -5,8 +5,8 @@
 /* Custom styles - Local Fonts */
 @font-face {
   font-family: 'P22MackinacPro';
-  src: url('../public/fonts/P22MackinacPro-Medium.woff2') format('woff2'),
-       url('../public/fonts/P22MackinacPro-Medium.woff') format('woff');
+  src: url('/fonts/P22MackinacPro-Medium.woff2') format('woff2'),
+       url('/fonts/P22MackinacPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -14,8 +14,8 @@
 
 @font-face {
   font-family: 'P22MackinacPro';
-  src: url('../public/fonts/P22MackinacPro-Bold.woff2') format('woff2'),
-       url('../public/fonts/P22MackinacPro-Bold.woff') format('woff');
+  src: url('/fonts/P22MackinacPro-Bold.woff2') format('woff2'),
+       url('/fonts/P22MackinacPro-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -23,8 +23,8 @@
 
 @font-face {
   font-family: 'P22MackinacPro';
-  src: url('../public/fonts/P22MackinacPro-ExtraBold.woff2') format('woff2'),
-       url('../public/fonts/P22MackinacPro-ExtraBold.woff') format('woff');
+  src: url('/fonts/P22MackinacPro-ExtraBold.woff2') format('woff2'),
+       url('/fonts/P22MackinacPro-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -32,8 +32,8 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../public/fonts/Roboto-Variable.woff2') format('woff2'),
-       url('../public/fonts/Roboto-Variable.woff') format('woff');
+  src: url('/fonts/Roboto-Variable.woff2') format('woff2'),
+       url('/fonts/Roboto-Variable.woff') format('woff');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
