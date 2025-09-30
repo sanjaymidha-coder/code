@@ -13,6 +13,9 @@ function toggleFAQ(index) {
             if (otherAnswer && otherIcon) {
                 otherAnswer.style.maxHeight = '0';
                 otherAnswer.classList.remove('open');
+                if (otherAnswer.parentElement) {
+                    otherAnswer.parentElement.classList.remove('faq-item-active');
+                }
                 otherIcon.classList.remove('open', 'text-dark');
                 otherIcon.classList.add('text-white');
                 if (otherCircle) {
@@ -26,6 +29,9 @@ function toggleFAQ(index) {
     if (!isOpen) {
         answer.style.maxHeight = answer.scrollHeight + 'px';
         answer.classList.add('open');
+        if (answer.parentElement) {
+            answer.parentElement.classList.add('faq-item-active');
+        }
         icon.classList.add('open');
         icon.classList.remove('text-white');
         icon.classList.add('text-dark');
@@ -36,6 +42,9 @@ function toggleFAQ(index) {
     } else {
         answer.style.maxHeight = '0';
         answer.classList.remove('open');
+        if (answer.parentElement) {
+            answer.parentElement.classList.remove('faq-item-active');
+        }
         icon.classList.remove('open', 'text-dark');
         icon.classList.add('text-white');
         if (circle) {
@@ -61,7 +70,7 @@ function initClientLogosSlider() {
                 autoplay: true,
                 autoplaySpeed: 2000,
                 arrows: false,
-                dots: true,
+                dots: false,
                 infinite: true,
                 centerMode: false,
                 pauseOnHover: false,
@@ -82,6 +91,12 @@ function initClientLogosSlider() {
 document.addEventListener('DOMContentLoaded', function () {
     // Try to initialize once loaded
     initClientLogosSlider();
+    // Mark selects as filled on change for styling
+    document.querySelectorAll('.select-global').forEach(function (el) {
+        el.addEventListener('change', function () {
+            if (el.value && el.value !== '') { el.classList.add('filled'); } else { el.classList.remove('filled'); }
+        });
+    });
 });
 
 // Re-evaluate on resize to toggle slider based on breakpoint

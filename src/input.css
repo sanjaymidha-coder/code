@@ -50,6 +50,10 @@
   .input-global {
     @apply w-full bg-dark font-medium text-gray-500 text-sm px-4 py-3 rounded-md border border-[#5C666B] focus:ring-2 focus:ring-light-blue focus:outline-none;
   }
+  .input-global:not(:placeholder-shown),
+  .input-global:focus {
+    @apply bg-white text-dark;
+  }
   
   .select-global {
     @apply w-full bg-dark font-medium text-gray-500 text-sm px-4 py-3 rounded-md border border-[#5C666B] focus:ring-2 focus:ring-light-blue focus:outline-none appearance-none cursor-pointer;
@@ -82,6 +86,9 @@
     /* Keep dropdown options readable here as well */
     color-scheme: light;
   }
+  /* Filled selects appear white */
+  .select-global:focus,
+  .select-global.filled { @apply bg-white text-dark; }
   
   .telephone-container .input-global {
     @apply bg-transparent border-0 rounded-none focus:ring-0 focus:outline-none;
@@ -124,27 +131,27 @@
     max-height: 500px;
     opacity: 1;
   }
+
   
   .faq-icon {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  /* Active FAQ item underline */
+  .faq-item-active {
+    border-bottom: 2px solid #3B82F6 !important;
   }
 
   .faq-icon.open {
     transform: rotate(180deg);
   }
 
-  .typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #fff;
-    width: 0;
-    display: inline-block;
-    animation: typing 3s steps(30, end) forwards;
-  }
-  
+  /* Disable typewriter effect */
+  .typewriter,
   .typewriter.delay {
-    animation-delay: 3.5s; /* Wait until first finishes */
-    animation-fill-mode: both;
+    width: auto;
+    border-right: 0;
+    animation: none;
   }
   
   /* Typing effect */
@@ -161,19 +168,9 @@
   
 }
 
-/* Slick dots tweaks for dark background */
+/* Hide slick dots on mobile logos slider */
 @layer components {
-  .client-logos-slider .slick-dots li button:before {
-    color: #fff;
-    opacity: 1;
-  }
-  .client-logos-slider .slick-dots li.slick-active button:before {
-    color: #3B82F6; /* light-blue */
-    opacity: 1;
-  }
-  .client-logos-slider .slick-dots {
-    bottom: -35px;
-  }
+  .client-logos-slider .slick-dots { display: none !important; }
   .client-logos-slider .slick-track {
     display: flex;
     align-items: center;
@@ -191,6 +188,9 @@
     width: 100%;
   }
 }
+
+
+
 
 
 
