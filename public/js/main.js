@@ -12,6 +12,7 @@ function toggleFAQ(index) {
             const otherCircle = document.getElementById(`circle-${i}`);
             if (otherAnswer && otherIcon) {
                 otherAnswer.style.maxHeight = '0';
+                otherAnswer.classList.remove('open');
                 otherIcon.classList.remove('open', 'text-dark');
                 otherIcon.classList.add('text-white');
                 if (otherCircle) {
@@ -24,6 +25,7 @@ function toggleFAQ(index) {
 
     if (!isOpen) {
         answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.classList.add('open');
         icon.classList.add('open');
         icon.classList.remove('text-white');
         icon.classList.add('text-dark');
@@ -33,6 +35,7 @@ function toggleFAQ(index) {
         }
     } else {
         answer.style.maxHeight = '0';
+        answer.classList.remove('open');
         icon.classList.remove('open', 'text-dark');
         icon.classList.add('text-white');
         if (circle) {
