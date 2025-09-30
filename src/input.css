@@ -174,5 +174,23 @@
   .client-logos-slider .slick-dots {
     bottom: -35px;
   }
+  .client-logos-slider .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .client-logos-slider .slick-slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+  }
+  .client-logos-slider .slick-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
+
+
 
