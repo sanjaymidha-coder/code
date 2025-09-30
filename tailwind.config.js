@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-content: [
-  "./public/**/*.{html,js}", 
-  "./src/**/*.{html,js}"     
-],
+  content: [
+    "./public/index.html",   
+    "./src/**/*.{html,js}", 
+  ],
   safelist: [
     'input-global',
     'select-global'
