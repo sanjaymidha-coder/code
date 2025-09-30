@@ -91,10 +91,16 @@ function initClientLogosSlider() {
 document.addEventListener('DOMContentLoaded', function () {
     // Try to initialize once loaded
     initClientLogosSlider();
-    // Mark selects as filled on change for styling
-    document.querySelectorAll('.select-global').forEach(function (el) {
-        el.addEventListener('change', function () {
-            if (el.value && el.value !== '') { el.classList.add('filled'); } else { el.classList.remove('filled'); }
+    // Toggle filled state for inputs, textareas and selects
+    function updateFilled(el) {
+        const tag = el.tagName;
+        const hasValue = tag === 'SELECT' ? (el.value !== '' && el.value != null) : (el.value && el.value.trim() !== '');
+        if (hasValue) { el.classList.add('filled'); } else { el.classList.remove('filled'); }
+    }
+    document.querySelectorAll('.input-global, .select-global').forEach(function (el) {
+        updateFilled(el);
+        ['input','change','blur'].forEach(function (evt) {
+            el.addEventListener(evt, function () { updateFilled(el); });
         });
     });
 });
