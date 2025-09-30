@@ -34,9 +34,18 @@
 
 /* Custom component styles */
 @layer components {
+  /* Floating action button with icon swap on hover */
+  .figma-fab { position: fixed; bottom: 20px; right: 20px; }
+  .figma-fab-inner { position: relative; overflow: hidden; }
+  .figma-fab i { transition: transform 200ms ease, opacity 200ms ease; }
+  .figma-fab .icon-default { transform: translateY(0); opacity: 1; }
+  .figma-fab .icon-hover { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transform: translateY(-120%); opacity: 0; }
+  .figma-fab-inner:hover .icon-default { transform: translateY(120%); opacity: 0; }
+  .figma-fab-inner:hover .icon-hover { transform: translateY(0); opacity: 1; }
+
   /* Sticky header styles */
   .header-sticky-placeholder { height: var(--header-height, 72px); }
-
+  
   .site-header {
     position: sticky;
     top: 0;
