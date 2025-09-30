@@ -126,7 +126,9 @@
   .faq-answer.open {
     max-height: 500px;
     opacity: 1;
+    margin-top: 12px;
   }
+
 
   
   .faq-icon {
