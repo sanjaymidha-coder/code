@@ -2,6 +2,7 @@ function toggleFAQ(index) {
     const answer = document.getElementById(`answer-${index}`);
     const icon = document.getElementById(`icon-${index}`);
     const circle = document.getElementById(`circle-${index}`);
+    const button = document.querySelector(`[onclick="toggleFAQ(${index})"]`);
 
     const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '0';
 
@@ -10,9 +11,14 @@ function toggleFAQ(index) {
             const otherAnswer = document.getElementById(`answer-${i}`);
             const otherIcon = document.getElementById(`icon-${i}`);
             const otherCircle = document.getElementById(`circle-${i}`);
+            const otherButton = document.querySelector(`[onclick="toggleFAQ(${i})"]`);
             if (otherAnswer && otherIcon) {
                 otherAnswer.style.maxHeight = '0';
                 otherAnswer.classList.remove('open');
+                if (otherButton) {
+                    otherButton.setAttribute('aria-expanded', 'false');
+                    otherButton.setAttribute('aria-controls', `answer-${i}`);
+                }
                 if (otherAnswer.parentElement) {
                     otherAnswer.parentElement.classList.remove('faq-item-active');
                 }
@@ -29,6 +35,10 @@ function toggleFAQ(index) {
     if (!isOpen) {
         answer.style.maxHeight = answer.scrollHeight + 'px';
         answer.classList.add('open');
+        if (button) {
+            button.setAttribute('aria-expanded', 'true');
+            button.setAttribute('aria-controls', `answer-${index}`);
+        }
         if (answer.parentElement) {
             answer.parentElement.classList.add('faq-item-active');
         }
@@ -42,6 +52,10 @@ function toggleFAQ(index) {
     } else {
         answer.style.maxHeight = '0';
         answer.classList.remove('open');
+        if (button) {
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-controls', `answer-${index}`);
+        }
         if (answer.parentElement) {
             answer.parentElement.classList.remove('faq-item-active');
         }

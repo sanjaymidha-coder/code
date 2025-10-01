@@ -12,13 +12,14 @@
 </head>
 
 <body class="bg-dark">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:rounded-xs focus:outline-none focus:ring-2">Skip to main content</a>
     <!-- Header -->
     <header id="site-header" class="bg-dark-blue text-white">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-bold">CODELLER</div>
 
-                <div class="text-sm"><a href="#"
+                <nav aria-label="Primary" class="text-sm"><a href="#"
                         class="flex items-center gap-2 border border-white rounded-xs px-4 py-2 md:px-8 md:py-3 text-sm text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600">
                         Schedule a Call
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,12 +33,13 @@
                                     fill="currentColor" />
                             </g>
                         </svg>
-                    </a></div>
+                    </a></nav>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
+    <main id="main-content" role="main">
     <section class="bg-dark-blue text-white pt-20 bg-hero-pattern bg-cover bg-center-bottom bg-no-repeat">
         <div class="container mx-auto px-4 text-center">
             <h1
@@ -51,10 +53,12 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
+                    aria-label="See pricing"
                     class="bg-blue text-dark px-8 py-4 text-sm min-w-[156px] rounded-xs hover:bg-white transition-colors flex items-center justify-center">
                     See Pricing
                 </button>
                 <button
+                    aria-label="Book a discovery call"
                     class="bg-white text-dark px-8 py-4 text-sm min-w-[211px] rounded-xs hover:bg-dark hover:text-white transition-colors flex items-center justify-center">
                     Book a Discovery Call
                 </button>
@@ -1120,25 +1124,25 @@
 
                         <!-- Enquiry Subject -->
                         <div>
-                            <label class="block text-white text-sm font-medium mb-2">Name</label>
-                            <input type="text" class="input-global">
+                            <label class="block text-white text-sm font-medium mb-2" for="enquiry-name">Name</label>
+                            <input id="enquiry-name" name="name" type="text" class="input-global">
                         </div>
 
                         <!-- Email and Telephone Row -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <!-- Email Field -->
                             <div>
-                                <label class="block text-white text-sm font-medium mb-2">Your Email</label>
-                                <input type="email" class="input-global">
+                                <label class="block text-white text-sm font-medium mb-2" for="enquiry-email">Your Email</label>
+                                <input id="enquiry-email" name="email" type="email" class="input-global">
                             </div>
 
                             <!-- Telephone Number -->
                             <div>
-                                <label class="block text-white text-sm font-medium mb-2">Telephone Number</label>
+                                <label class="block text-white text-sm font-medium mb-2" for="enquiry-phone">Telephone Number</label>
                                 <div class="relative">
                                     <div
                                         class="telephone-container flex items-center bg-dark border border-[#5C666B] rounded-md overflow-hidden">
-                                        <select class="select-global  flex-shrink-0"
+                                        <select aria-label="Country code" class="select-global  flex-shrink-0"
                                             style="width: auto; min-width: 80px;">
                                             <option value="" selected disabled hidden></option>
                                             <option value="+44">+44</option>
@@ -1146,7 +1150,7 @@
                                             <option value="+33">+33</option>
                                         </select>
                                         <div class="w-px h-8 bg-gray-500"></div>
-                                        <input type="tel"
+                                        <input id="enquiry-phone" name="phone" type="tel"
                                             class="input-global border-0 rounded-none bg-transparent focus:ring-0 focus:outline-none flex-1">
                                     </div>
                                 </div>
@@ -1155,8 +1159,8 @@
 
                         <!-- Enquiry Subject -->
                         <div>
-                            <label class="block text-white text-sm font-medium mb-2">Enquiry Subject</label>
-                            <select class="select-global">
+                            <label class="block text-white text-sm font-medium mb-2" for="enquiry-subject">Enquiry Subject</label>
+                            <select id="enquiry-subject" name="subject" class="select-global">
                                 <option value="" selected disabled hidden></option>
                                 <option value="website-design">Website Design</option>
                                 <option value="branding">Branding</option>
@@ -1167,8 +1171,8 @@
 
                         <!-- Project Budget -->
                         <div>
-                            <label class="block text-white text-sm font-medium mb-2">Project Budget</label>
-                            <select class="select-global">
+                            <label class="block text-white text-sm font-medium mb-2" for="enquiry-budget">Project Budget</label>
+                            <select id="enquiry-budget" name="budget" class="select-global">
                                 <option value="" selected disabled hidden></option>
                                 <option value="less-than-5k">Less than £5k</option>
                                 <option value="5k-10k">£5k - £10k</option>
@@ -1179,8 +1183,8 @@
 
                         <!-- Message -->
                         <div>
-                            <label class="block text-white text-sm font-medium mb-2">Message</label>
-                            <textarea rows="4" class="input-global"></textarea>
+                            <label class="block text-white text-sm font-medium mb-2" for="enquiry-message">Message</label>
+                            <textarea id="enquiry-message" name="message" rows="4" class="input-global"></textarea>
                         </div>
 
                         <!-- Send Enquiry Button -->
@@ -1250,9 +1254,9 @@
                         <h4 class="text-white text-lg font-bold mb-4">Get in Touch</h4>
                         <div class="space-y-3 text-white/90 text-sm">
                             <div class="flex items-center gap-3"><span
-                                    class="w-6 h-6 rounded-sm bg-white/70"></span><span>hi@codeller.com</span></div>
+                                    class="w-6 h-6 rounded-sm bg-white/70" aria-hidden="true"></span><span>hi@codeller.com</span></div>
                             <div class="flex items-center gap-3"><span
-                                    class="w-6 h-6 rounded-sm bg-white/70"></span><span>+44 1902 410 109</span></div>
+                                    class="w-6 h-6 rounded-sm bg-white/70" aria-hidden="true"></span><span>+44 1902 410 109</span></div>
                         </div>
                     </div>
                 </div>
@@ -1262,27 +1266,27 @@
                     <div class="text-sm font-medium">Copyright ©2025 Codeller. All Rights
                         Reserved.</div>
                     <div class="flex items-center justify-center gap-3 md:mt-0">
-                        <a href=" #"
+                        <a href=" #" aria-label="Dribbble"
                             class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
                             <i class="fa-brands fa-dribbble"></i>
                         </a>
-                        <a href="#"
+                        <a href="#" aria-label="Behance"
                             class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
                             <i class="fa-brands fa-behance"></i>
                         </a>
-                        <a href="#"
+                        <a href="#" aria-label="Instagram"
                             class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="#"
+                        <a href="#" aria-label="LinkedIn"
                             class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
-                        <a href="#"
+                        <a href="#" aria-label="X"
                             class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
-                        <a href="#"
+                        <a href="#" aria-label="Facebook"
                             class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
@@ -1291,6 +1295,7 @@
             </div>
         </div>
     </footer>
+    </main>
 
 <!-- Bottom Right Figma Link -->
 <a href="#" target="_blank" class="figma-fab" aria-label="Open Figma">
