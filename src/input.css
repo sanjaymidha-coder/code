@@ -58,9 +58,11 @@
     padding-bottom: 10px;
   }
   .site-header.is-hidden { transform: translateY(-100%); }
+  .site-header.is-hidden { transform: translateY(-100%); }
   .site-header.is-stuck {
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     backdrop-filter: saturate(140%) blur(6px);
+    min-height: 70px;
   }
   .btn-primary {
     @apply bg-light-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center;

@@ -2,7 +2,7 @@ function toggleFAQ(index) {
     const answer = document.getElementById(`answer-${index}`);
     const icon = document.getElementById(`icon-${index}`);
     const circle = document.getElementById(`circle-${index}`);
-    const button = document.querySelector(`[onclick="toggleFAQ(${index})"]`);
+    const button = document.querySelector(`[aria-controls="answer-${index}"]`);
 
     const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '0';
 
@@ -11,14 +11,9 @@ function toggleFAQ(index) {
             const otherAnswer = document.getElementById(`answer-${i}`);
             const otherIcon = document.getElementById(`icon-${i}`);
             const otherCircle = document.getElementById(`circle-${i}`);
-            const otherButton = document.querySelector(`[onclick="toggleFAQ(${i})"]`);
             if (otherAnswer && otherIcon) {
                 otherAnswer.style.maxHeight = '0';
                 otherAnswer.classList.remove('open');
-                if (otherButton) {
-                    otherButton.setAttribute('aria-expanded', 'false');
-                    otherButton.setAttribute('aria-controls', `answer-${i}`);
-                }
                 if (otherAnswer.parentElement) {
                     otherAnswer.parentElement.classList.remove('faq-item-active');
                 }
@@ -35,10 +30,6 @@ function toggleFAQ(index) {
     if (!isOpen) {
         answer.style.maxHeight = answer.scrollHeight + 'px';
         answer.classList.add('open');
-        if (button) {
-            button.setAttribute('aria-expanded', 'true');
-            button.setAttribute('aria-controls', `answer-${index}`);
-        }
         if (answer.parentElement) {
             answer.parentElement.classList.add('faq-item-active');
         }
@@ -49,13 +40,10 @@ function toggleFAQ(index) {
             circle.classList.remove('bg-ink', 'text-white');
             circle.classList.add('bg-blue', 'text-dark');
         }
+        if (button) { button.setAttribute('aria-expanded', 'true'); }
     } else {
         answer.style.maxHeight = '0';
         answer.classList.remove('open');
-        if (button) {
-            button.setAttribute('aria-expanded', 'false');
-            button.setAttribute('aria-controls', `answer-${index}`);
-        }
         if (answer.parentElement) {
             answer.parentElement.classList.remove('faq-item-active');
         }
@@ -65,6 +53,7 @@ function toggleFAQ(index) {
             circle.classList.remove('bg-blue', 'text-dark');
             circle.classList.add('bg-ink', 'text-white');
         }
+        if (button) { button.setAttribute('aria-expanded', 'false'); }
     }
 }
 
@@ -105,6 +94,40 @@ function initClientLogosSlider() {
 document.addEventListener('DOMContentLoaded', function () {
     // Try to initialize once loaded
     initClientLogosSlider();
+    // Mobile offcanvas menu
+    (function initMobileMenu(){
+        const openBtn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const panel = document.getElementById('mobile-offcanvas');
+        const backdrop = document.getElementById('mobile-offcanvas-backdrop');
+        if (!openBtn || !panel || !backdrop) return;
+
+        function openMenu(){
+            panel.classList.remove('translate-x-full');
+            backdrop.classList.remove('pointer-events-none');
+            requestAnimationFrame(()=>{ backdrop.style.opacity = '1'; });
+            panel.setAttribute('aria-hidden','false');
+            openBtn.setAttribute('aria-expanded','true');
+            (closeBtn || panel).focus({ preventScroll: true });
+            document.addEventListener('keydown', onKeydown);
+        }
+
+        function closeMenu(){
+            panel.classList.add('translate-x-full');
+            backdrop.style.opacity = '0';
+            backdrop.classList.add('pointer-events-none');
+            panel.setAttribute('aria-hidden','true');
+            openBtn.setAttribute('aria-expanded','false');
+            openBtn.focus({ preventScroll: true });
+            document.removeEventListener('keydown', onKeydown);
+        }
+
+        function onKeydown(e){ if (e.key === 'Escape') closeMenu(); }
+
+        openBtn.addEventListener('click', function(e){ e.preventDefault(); openMenu(); });
+        if (closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeMenu(); });
+        backdrop.addEventListener('click', function(){ closeMenu(); });
+    })();
     // Sticky header behavior
     (function initStickyHeader(){
         const header = document.getElementById('site-header');
@@ -168,11 +191,14 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute("href"));
       if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
+        const offset = -70; // adjust for your sticky header
+        const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition + offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
         });
       }
     });
   });
-

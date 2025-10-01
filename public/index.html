@@ -14,18 +14,18 @@
 <body class="bg-dark">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:rounded-xs focus:outline-none focus:ring-2">Skip to main content</a>
     <!-- Header -->
-    <header id="site-header" class="bg-dark-blue text-white" role="banner">
+    <header id="site-header" class="bg-dark-blue text-white flex items-center justify-center" role="banner">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold" aria-label="Codeller home">CODELLER</div>
+                <div class="text-xl md:text-2xl font-bold" aria-label="Codeller home">CODELLER</div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="#work" class="hover:text-light-blue transition-colors">Work</a>
                     <a href="#services" class="hover:text-light-blue transition-colors">Services</a>
                     <a href="#faqs" class="hover:text-light-blue transition-colors">FAQs</a>
                     <a href="#contact" class="hover:text-light-blue transition-colors">Contact Us</a>
                   </nav>
-                <div class="text-sm"><a href="#"
-                        class="flex items-center gap-2 border border-white rounded-xs px-4 py-2 md:px-8 md:py-3 text-sm text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600">
+                <div class="text-sm flex items-center gap-3"><a href="#"
+                        class="flex items-center gap-2 border border-white rounded-xs px-2 py-2 md:px-8 md:py-3 text-sm text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600">
                         Schedule a Call
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" focusable="false">
@@ -39,10 +39,17 @@
                                     fill="currentColor" />
                             </g>
                         </svg>
-                    </a></div>
+                    </a>
+                    <a href="#" id="mobile-menu-button" role="button" aria-label="Open menu" aria-controls="mobile-offcanvas" aria-expanded="false" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full text-white ring-1 ring-white text-white">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M4 6h16v2H4zM4 11h16v2H4zM4 16h16v2H4z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
+
 
     <!-- Hero Section -->
     <main id="main-content" role="main">
