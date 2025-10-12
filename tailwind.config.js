@@ -46,6 +46,8 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('images/hero-pattren.webp')",
+        'footer-bg': "url('images/footer-bg.webp')",
+        'kickoff-grid': "url('images/kickoff-grid.webp')",
       },
       backgroundPosition: {
         'center-bottom': 'center bottom',
