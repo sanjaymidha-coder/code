@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Codeller is a digital product agency that makes complex products simple and beautiful. We provide UX/UI design, development, and strategy services.">
+    <meta name="description" content="Codeller is a digital product agency that makes complex products simple and beautiful. We provide UX/UI design, development, and strategy services.">
     <meta name="theme-color" content="#001E30">
     <title>CODELLER - Digital Product Agency</title>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="slick/slick.min.css" />
-    <link rel="stylesheet" href="slick/slick-theme.min.css" />
-    <link href="output.css" rel="stylesheet">
+    <!-- Preload CSS, then apply it asynchronously -->
+    <link rel="preload" href="output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="output.css">
+    </noscript>
+
+    <!-- Defer JS -->
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="slick/slick.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
 
     <!-- Preload critical hero image -->
     <link rel="preload" href="images/hero-img.svg" as="image">
@@ -103,10 +110,10 @@
                         loading="lazy" decoding="async" /></div>
                 <div class="px-6"><img src="images/mxology.svg" alt="Mxology company logo" class="mx-auto"
                         loading="lazy" decoding="async" /></div>
-                <div class="px-6"><img src="images/wldlfe.svg" alt="WLDLFE company logo" class="mx-auto"
-                        loading="lazy" decoding="async" /></div>
-                <div class="px-6"><img src="images/revo.svg" alt="Revo company logo" class="mx-auto"
-                        loading="lazy" decoding="async" /></div>
+                <div class="px-6"><img src="images/wldlfe.svg" alt="WLDLFE company logo" class="mx-auto" loading="lazy"
+                        decoding="async" /></div>
+                <div class="px-6"><img src="images/revo.svg" alt="Revo company logo" class="mx-auto" loading="lazy"
+                        decoding="async" /></div>
             </div>
             <!-- Desktop static logos -->
             <div class="hidden md:flex justify-center items-center gap-12" aria-label="Client logos">
@@ -116,7 +123,7 @@
                 <img src="images/wldlfe.svg" alt="WLDLFE company logo" loading="lazy" decoding="async" />
                 <img src="images/revo.svg" alt="Revo company logo" loading="lazy" decoding="async" />
             </div>
-            <div class="mt-20"><img src="images/hero-img.svg" alt="Dashboard and phone mockups" class="w-full" />
+            <div class="mt-20"><img src="images/hero-img.svg" alt="Dashboard and phone mockups" class="w-full" width="1440" height="556" fetchpriority="high" decoding="async" />
             </div>
 
         </section>
@@ -292,8 +299,8 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                     <div class="">
                         <div class="w-[48px] h-[48px] mb-3 rounded">
-                            <img src="images/icons/conversion.svg" alt="Conversion optimization icon"
-                                width="48" loading="lazy" decoding="async">
+                            <img src="images/icons/conversion.svg" alt="Conversion optimization icon" width="48"
+                                loading="lazy" decoding="async">
                         </div>
                         <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">User-Centered Design That
                             Converts</h3>
@@ -329,8 +336,8 @@
                     </div>
                     <div class="">
                         <div class="w-[48px] h-[48px] mb-3 rounded">
-                            <img src="images/icons/growth.svg" alt="Business growth icon" width="48"
-                                loading="lazy" decoding="async">
+                            <img src="images/icons/growth.svg" alt="Business growth icon" width="48" loading="lazy"
+                                decoding="async">
                         </div>
                         <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">Design That Aligns With
                             Business Growth</h3>
@@ -341,8 +348,8 @@
                     </div>
                     <div class="">
                         <div class="w-[48px] h-[48px] mb-3 rounded">
-                            <img src="images/icons/iteration.svg" alt="Rapid iteration icon" width="48"
-                                loading="lazy" decoding="async">
+                            <img src="images/icons/iteration.svg" alt="Rapid iteration icon" width="48" loading="lazy"
+                                decoding="async">
                         </div>
                         <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">Rapid Iteration Without
                             Compromise</h3>
@@ -353,8 +360,8 @@
                     </div>
                     <div class="">
                         <div class="w-[48px] h-[48px] mb-3 rounded">
-                            <img src="images/icons/custom.svg" alt="Custom solutions icon" width="48"
-                                loading="lazy" decoding="async">
+                            <img src="images/icons/custom.svg" alt="Custom solutions icon" width="48" loading="lazy"
+                                decoding="async">
                         </div>
                         <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">Custom Solutions for
                             Every
@@ -435,8 +442,7 @@
             <!-- Blue background with subtle grid -->
             <div class="relative">
                 <!-- Grid background image overlay -->
-                <div
-                    class="absolute inset-0 bg-[url('images/kickoff-grid.webp')] bg-repeat bg-contain bg-bottom">
+                <div class="absolute inset-0 bg-[url('images/kickoff-grid.webp')] bg-repeat bg-contain bg-bottom">
                 </div>
                 <div class="container relative mx-auto px-4 py-28 md:py-32 lg:py-36 text-center">
                     <h2 id="kickoff-title" class="text-white lg:text-[48px]"> Let’s Kick Off Your <br
@@ -446,8 +452,8 @@
                     <div class="mt-8 flex items-center justify-center">
                         <a href="https://cal.com/codeller/intro?overlayCalendar=true" role="button"
                             class="inline-flex items-center justify-center rounded-xs bg-white text-dark px-6 md:px-8 py-3 md:py-4 hover:bg-ink hover:text-white transition min-w-[231px] font-medium">
-                            <img src="images/google-meet-icon.svg" alt="Google Meet icon" class="mr-3"
-                                loading="lazy" decoding="async" /> Book a Call </a>
+                            <img src="images/google-meet-icon.svg" alt="Google Meet icon" class="mr-3" loading="lazy"
+                                decoding="async" /> Book a Call </a>
                     </div>
                     <p class="mt-6 text-white text-base md:text-xl">or send us an email <span class="mx-2">→</span>
                         <a href="mailto:hi@codeller.com" class="underline underline-offset-2">hi@codeller.com</a>
@@ -899,8 +905,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
                     <div class="">
                         <div class="w-[48px] h-[48px] mb-3 rounded">
-                            <img src="images/icons/pause.svg" alt="Pause anytime feature icon" width="48"
-                                loading="lazy" decoding="async">
+                            <img src="images/icons/pause.svg" alt="Pause anytime feature icon" width="48" loading="lazy"
+                                decoding="async">
                         </div>
                         <h3 class="text-lg font-bold mb-1 md:mb-1 text-dark">Pause Anytime. Keep Unused Credits.</h3>
                         <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -921,8 +927,8 @@
                     </div>
                     <div class="">
                         <div class="w-[48px] h-[48px] mb-3 rounded">
-                            <img src="images/icons/satisfaction.svg" alt="Satisfaction guarantee icon"
-                                width="48" loading="lazy" decoding="async">
+                            <img src="images/icons/satisfaction.svg" alt="Satisfaction guarantee icon" width="48"
+                                loading="lazy" decoding="async">
                         </div>
                         <h3 class="text-lg font-bold mb-1 md:mb-1 text-dark">100% Satisfaction Guaranteed</h3>
                         <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing
