@@ -1,33 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Codeller is a digital product agency that makes complex products simple and beautiful. We provide UX/UI design, development, and strategy services.">
+    <meta name="theme-color" content="#001E30">
     <title>CODELLER - Digital Product Agency</title>
-    <link href="output.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="slick/slick.min.css" />
     <link rel="stylesheet" href="slick/slick-theme.min.css" />
+    <link href="output.css" rel="stylesheet">
+
+    <!-- Preload critical hero image -->
+    <link rel="preload" href="images/hero-img.svg" as="image">
 </head>
 
 <body class="bg-dark">
     <a href="#main-content"
-        class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:rounded-xs focus:outline-none focus:ring-2">Skip
+        class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-white text-dark px-3 py-2 rounded">Skip
         to main content</a>
+    <!-- Screen reader announcements -->
+    <div id="sr-announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
     <!-- Header -->
     <header id="site-header" class="bg-dark-blue text-white flex items-center justify-center" role="banner">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-xl md:text-2xl font-bold" aria-label="Codeller home">CODELLER</div>
+                <div class="text-xl md:text-2xl font-bold" role="img" aria-label="Codeller logo">CODELLER</div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#work" class="hover:text-light-blue transition-colors">Work</a>
-                    <a href="#services" class="hover:text-light-blue transition-colors">Services</a>
-                    <a href="#faqs" class="hover:text-light-blue transition-colors">FAQs</a>
-                    <a href="#contact" class="hover:text-light-blue transition-colors">Contact Us</a>
+                    <a href="#work"
+                        class="hover:text-light-blue transition-colors focus:text-light-blue focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark-blue rounded">Work</a>
+                    <a href="#services"
+                        class="hover:text-light-blue transition-colors focus:text-light-blue focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark-blue rounded">Services</a>
+                    <a href="#faqs"
+                        class="hover:text-light-blue transition-colors focus:text-light-blue focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark-blue rounded">FAQs</a>
+                    <a href="#contact"
+                        class="hover:text-light-blue transition-colors focus:text-light-blue focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark-blue rounded">Contact
+                        Us</a>
                 </nav>
-                <div class="text-sm flex items-center gap-3"><a href="#"
-                        class="flex items-center gap-2 border border-white rounded-xs px-2 py-2 md:px-8 md:py-3 text-sm text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600">
+                <div class="text-sm flex items-center gap-3">
+                    <a href="https://cal.com/codeller/intro?overlayCalendar=true"
+                        class="flex items-center gap-2 border border-white rounded-xs px-2 py-2 md:px-8 md:py-3 text-sm text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark-blue">
                         Schedule a Call
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" focusable="false">
@@ -44,7 +58,7 @@
                     </a>
                     <a href="#" id="mobile-menu-button" role="button" aria-label="Open menu"
                         aria-controls="mobile-offcanvas" aria-expanded="false"
-                        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full text-white ring-1 ring-white text-white">
+                        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full text-white ring-1 ring-white text-white focus:ring-2 focus:ring-blue focus:outline-none">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
                             focusable="false">
                             <path d="M4 6h16v2H4zM4 11h16v2H4zM4 16h16v2H4z" />
@@ -55,28 +69,26 @@
         </div>
     </header>
 
-
     <!-- Hero Section -->
     <main id="main-content" role="main">
         <section class="bg-dark-blue text-white pt-20 bg-hero-pattern bg-cover bg-center-bottom bg-no-repeat">
             <div class="container mx-auto px-4 text-center">
                 <h1
                     class=" text-2xl sm:text-[32px] md:text-[52px] xl:text-[72px] font-bold mb-6 leading-[1.2] max-w-[960px] mx-auto">
-                    <span class="typewriter block">Making ComplexProducts</span>
+                    <span class="typewriter block">Making Complex Products</span>
                     <span class="typewriter block delay">Simple & Beautiful</span>
                 </h1>
-                <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto text-gray-400 max-w-[925px]">
-                    From luxury travel experiences to high-performance automotive products and niche eCommerce stores,
-                    our
-                    agency has designed digital experiences that simplify complexity and delight users.
+                <p class="text-base md:text-lg mb-8 max-w-2xl mx-auto text-gray-300 max-w-[1000px]">
+                    Ideal for growing brands or marketing teams that need consistent, high-quality creative output
+                    without hiring in-house.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#pricing" aria-label="See pricing"
-                        class="bg-blue text-dark px-8 py-4 text-sm min-w-[156px] rounded-xs hover:bg-white transition-colors flex items-center justify-center">
+                    <a href="#pricing" role="button"
+                        class="bg-blue text-dark px-8 py-4 text-sm min-w-[156px] rounded-xs hover:bg-white transition-colors flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark-blue">
                         See Pricing
                     </a>
-                    <a href="#" aria-label="Book a discovery call"
-                        class="bg-white text-dark px-8 py-4 text-sm min-w-[211px] rounded-xs hover:bg-dark hover:text-white transition-colors flex items-center justify-center">
+                    <a href="https://cal.com/codeller/intro?overlayCalendar=true" role="button"
+                        class="bg-white text-dark px-8 py-4 text-sm min-w-[211px] rounded-xs hover:bg-dark hover:text-white transition-colors flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark-blue">
                         Book a Discovery Call
                     </a>
                 </div>
@@ -85,41 +97,47 @@
             <!-- Client Logos -->
             <!-- Mobile slider -->
             <div class="client-logos-slider md:hidden">
-                <div class="px-6"><img src="images/fj.svg" alt="brand-logo" class="mx-auto" /></div>
-                <div class="px-6"><img src="images/midland.svg" alt="brand-logo" class="mx-auto" /></div>
-                <div class="px-6"><img src="images/mxology.svg" alt="brand-logo" class="mx-auto" /></div>
-                <div class="px-6"><img src="images/wldlfe.svg" alt="brand-logo" class="mx-auto" /></div>
-                <div class="px-6"><img src="images/revo.svg" alt="brand-logo" class="mx-auto" /></div>
+                <div class="px-6"><img src="images/fj.svg" alt="FJ company logo" class="mx-auto" loading="lazy"
+                        decoding="async" /></div>
+                <div class="px-6"><img src="images/midland.svg" alt="Midland company logo" class="mx-auto"
+                        loading="lazy" decoding="async" /></div>
+                <div class="px-6"><img src="images/mxology.svg" alt="Mxology company logo" class="mx-auto"
+                        loading="lazy" decoding="async" /></div>
+                <div class="px-6"><img src="images/wldlfe.svg" alt="WLDLFE company logo" class="mx-auto"
+                        loading="lazy" decoding="async" /></div>
+                <div class="px-6"><img src="images/revo.svg" alt="Revo company logo" class="mx-auto"
+                        loading="lazy" decoding="async" /></div>
             </div>
             <!-- Desktop static logos -->
-            <div class="hidden md:flex justify-center items-center gap-12">
-                <img src="images/fj.svg" alt="brand-logo" />
-                <img src="images/midland.svg" alt="brand-logo" />
-                <img src="images/mxology.svg" alt="brand-logo" />
-                <img src="images/wldlfe.svg" alt="brand-logo" />
-                <img src="images/revo.svg" alt="brand-logo" />
+            <div class="hidden md:flex justify-center items-center gap-12" aria-label="Client logos">
+                <img src="images/fj.svg" alt="FJ company logo" loading="lazy" decoding="async" />
+                <img src="images/midland.svg" alt="Midland company logo" loading="lazy" decoding="async" />
+                <img src="images/mxology.svg" alt="Mxology company logo" loading="lazy" decoding="async" />
+                <img src="images/wldlfe.svg" alt="WLDLFE company logo" loading="lazy" decoding="async" />
+                <img src="images/revo.svg" alt="Revo company logo" loading="lazy" decoding="async" />
             </div>
-            <div class="mt-20"><img src="images/hero-img.png" alt="hero-img" class="w-full" /></div>
+            <div class="mt-20"><img src="images/hero-img.svg" alt="Dashboard and phone mockups" class="w-full" />
+            </div>
 
         </section>
 
 
         <!-- Portfolio Section -->
-        <section id="work" class="bg-dark py-12 md:py-20">
+        <section id="work" class="bg-dark py-12 md:py-20" role="region" aria-labelledby="work-heading">
             <div class="container mx-auto px-4">
                 <div
                     class="flex flex-col items-center md:flex-row gap-4 md:gap-6 justify-center md:justify-between text-center md:text-left">
-                    <h2 class="max-w-[302px] min-w-[245px] text-white">Design That Drives Growth</h2>
+                    <h2 id="work-heading" class="max-w-[302px] min-w-[245px] text-white">Design That Drives Growth</h2>
                     <div class="max-w-[527px]">
-                        <p class="text-base text-gray-500">Past projects span luxury travel, automotive, and eCommerce
+                        <p class="text-base text-gray-400">Past projects span luxury travel, automotive, and eCommerce
                             brands, showing how our agency transforms
                             complex products into simple, beautiful, and growth-driven digital experiences.</p>
                         <div class="flex flex-col md:flex-row gap-4 mt-4">
-                            <a href="#pricing"
+                            <a href="#pricing" role="button"
                                 class="bg-white text-dark text-base flex-1 px-4 py-3 lg:px-8 lg:py-4 lg:min-w-[211px] rounded-xs hover:bg-blue transition-colors flex gap-2 items-center justify-center font-medium">
                                 See Pricing
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                     <mask id="mask0_138_340" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
                                         y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="currentColor" />
@@ -131,11 +149,11 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="#why-choose-codeller"
+                            <a href="#why-choose-codeller" role="button"
                                 class="bg-white text-dark text-base flex-1 px-4 py-3 lg:px-8 lg:py-4 lg:min-w-[211px] rounded-xs hover:bg-blue transition-colors flex gap-2 justify-center font-medium">
                                 More Case Studies
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                     <mask id="mask0_138_340" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
                                         y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="currentColor" />
@@ -153,123 +171,112 @@
             </div>
         </section>
 
-        <section class="bg-dark text-white pb-12 md:pb-20">
+        <section class="bg-dark text-white pb-12 md:pb-20" role="region" aria-labelledby="portfolio-heading">
             <div class="container mx-auto px-4 flex flex-col gap-6">
                 <div class="flex md:flex-row flex-col gap-4 md:gap-3 lg:gap-6">
                     <div class="overflow-hidden flex flex-col md:w-1/3 lg:w-1/2">
                         <div class="relative flex flex-col flex-1">
-                            <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
-                                alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                            <img src="images/work/fatjoe.webp" alt="fatjoe. The Smarter Way To Get SEO Done."
+                                class="w-full flex-1 object-cover rounded-lg" loading="lazy" decoding="async" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div role="button" tabindex="0" aria-label="View project"
-                                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <i class="fas fa-arrow-right text-dark-gray"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-white mt-2">
-                            <h3 class="text-lg xl:text-xl font-medium mb-1">Project Name</h3>
-                            <p class="text-white text-sm xl:text-base">UI/UX Design</p>
+                            <h3 class="text-lg xl:text-xl font-medium mb-1">fatjoe.</h3>
                         </div>
                     </div>
                     <div class="overflow-hidden relative flex flex-col md:w-1/3 lg:w-1/3">
                         <div class="relative flex flex-col flex-1">
-                            <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
-                                alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                            <img src="images/work/trafalgar.webp" alt="Trafalgar Tours"
+                                class="w-full flex-1 object-cover rounded-lg" loading="lazy" decoding="async" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div role="button" tabindex="0" aria-label="View project"
-                                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <i class="fas fa-arrow-right text-dark-gray"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-white mt-2">
-                            <h3 class="text-lg xl:text-xl font-medium mb-1">Project Name</h3>
-                            <p class="text-white text-sm xl:text-base">UI/UX Design</p>
+                            <h3 class="text-lg xl:text-xl font-medium mb-1">Trafalgar Tours</h3>
                         </div>
                     </div>
                     <div class="overflow-hidden relative flex flex-col md:w-1/3 lg:w-1/3">
                         <div class="relative flex flex-col flex-1">
-                            <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
-                                alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                            <img src="images/work/luxurygold.webp" alt="Trafalgar Tours"
+                                class="w-full flex-1 object-cover rounded-lg" loading="lazy" decoding="async" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div role="button" tabindex="0" aria-label="View project"
-                                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <i class="fas fa-arrow-right text-dark-gray"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-white mt-2">
-                            <h3 class="text-lg xl:text-xl font-medium mb-1">Project Name</h3>
-                            <p class="text-white text-sm xl:text-base">UI/UX Design</p>
+                            <h3 class="text-lg xl:text-xl font-medium mb-1">Luxury Gold</h3>
                         </div>
                     </div>
                 </div>
                 <div class="flex md:flex-row flex-col gap-4 md:gap-3 lg:gap-6">
                     <div class="overflow-hidden flex flex-col md:w-1/3 lg:w-1/3">
                         <div class="relative flex flex-col flex-1">
-                            <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
-                                alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                            <img src="images/work/mxology.webp" alt="Trafalgar Tours"
+                                class="w-full flex-1 object-cover rounded-lg" loading="lazy" decoding="async" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div role="button" tabindex="0" aria-label="View project"
-                                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <i class="fas fa-arrow-right text-dark-gray"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-white mt-2">
-                            <h3 class="text-lg xl:text-xl font-medium mb-1">Project Name</h3>
-                            <p class="text-white text-sm xl:text-base">UI/UX Design</p>
+                            <h3 class="text-lg xl:text-xl font-medium mb-1">Mxology</h3>
                         </div>
                     </div>
                     <div class="overflow-hidden relative flex flex-col md:w-1/3 lg:w-1/3">
                         <div class="relative flex flex-col flex-1">
-                            <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
-                                alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                            <img src="images/work/wldlfe.webp" alt="WLDLFE Bikes"
+                                class="w-full flex-1 object-cover rounded-lg" loading="lazy" decoding="async" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div role="button" tabindex="0" aria-label="View project"
-                                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <i class="fas fa-arrow-right text-dark-gray"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-white mt-2">
-                            <h3 class="text-lg xl:text-xl font-medium mb-1">Project Name</h3>
-                            <p class="text-white text-sm xl:text-base">UI/UX Design</p>
+                            <h3 class="text-lg xl:text-xl font-medium mb-1">WLDLFE Bikes</h3>
                         </div>
                     </div>
                     <div class="overflow-hidden relative flex flex-col md:w-1/3 lg:w-1/2">
                         <div class="relative flex flex-col flex-1">
-                            <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_52683-69620.jpg"
-                                alt="Trafalgar Tours" class="w-full flex-1 object-cover rounded-lg" />
+                            <img src="images/work/costsaver.webp"
+                                alt="Costsaver Tours - Budget Tours & Holiday Packages"
+                                class="w-full flex-1 object-cover rounded-lg" loading="lazy" decoding="async" />
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div role="button" tabindex="0" aria-label="View project"
-                                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                         <i class="fas fa-arrow-right text-dark-gray"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-white mt-2">
-                            <h3 class="text-lg xl:text-xl font-medium mb-1">Project Name</h3>
-                            <p class="text-white text-sm xl:text-base">UI/UX Design</p>
+                            <h3 class="text-lg xl:text-xl font-medium mb-1">Costsaver Tours</h3>
                         </div>
                     </div>
                 </div>
@@ -277,14 +284,18 @@
         </section>
 
         <!-- How We Help Section -->
-        <section id="services" class="bg-white py-12 md:py-20">
+        <section id="services" class="bg-white py-12 md:py-20" role="region" aria-labelledby="services-heading">
             <div class="container mx-auto px-4">
-                <h2 class="font-extrabold text-center mb-12 md:mb-16 text-dark">How We Help Transform Your
-                    Product</h2>
+                <h2 id="services-heading" class="font-extrabold text-center mb-12 md:mb-16 text-dark">
+                    Design That Delivers Real Results
+                </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-base md:text-lg font-bold mb-2 md:mb-3 text-dark-gray">User-Centered Design That
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/conversion.svg" alt="Conversion optimization icon"
+                                width="48" loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">User-Centered Design That
                             Converts</h3>
                         <p class="text-gray-600 text-sm font-light">We create designs that put your users first,
                             resulting
@@ -292,8 +303,11 @@
                             conversion rates and better user satisfaction.</p>
                     </div>
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-base md:text-lg font-bold mb-2 md:mb-3 text-dark-gray">End-to-End Digital
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/end-to-end.svg" alt="End-to-end development icon" width="48"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">End-to-End Digital
                             Expertise
                         </h3>
                         <p class="text-gray-600 text-sm font-light">From concept to launch, we handle every aspect of
@@ -302,8 +316,11 @@
                             development with precision and care.</p>
                     </div>
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-base md:text-lg font-bold mb-2 md:mb-3 text-dark-gray">AI-Enhanced Insights for
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/ai.svg" alt="AI technology icon" width="48" loading="lazy"
+                                decoding="async">
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">AI-Enhanced Insights for
                             Smarter Design</h3>
                         <p class="text-gray-600 text-sm font-light">We leverage AI tools and data analytics to make
                             informed
@@ -311,8 +328,11 @@
                             that drive real business results.</p>
                     </div>
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-base md:text-lg font-bold mb-2 md:mb-3 text-dark-gray">Design That Aligns With
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/growth.svg" alt="Business growth icon" width="48"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">Design That Aligns With
                             Business Growth</h3>
                         <p class="text-gray-600 text-sm font-light">Every design decision we make is strategically
                             aligned
@@ -320,8 +340,11 @@
                             goals and growth objectives.</p>
                     </div>
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-base md:text-lg font-bold mb-2 md:mb-3 text-dark-gray">Rapid Iteration Without
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/iteration.svg" alt="Rapid iteration icon" width="48"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">Rapid Iteration Without
                             Compromise</h3>
                         <p class="text-gray-600 text-sm font-light">We move fast and iterate quickly while maintaining
                             the
@@ -329,8 +352,11 @@
                             standards in every deliverable.</p>
                     </div>
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-base md:text-lg font-bold mb-2 md:mb-3 text-dark-gray">Custom Solutions for
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/custom.svg" alt="Custom solutions icon" width="48"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold mb-1 md:mb-1 text-dark-gray">Custom Solutions for
                             Every
                             Brand</h3>
                         <p class="text-gray-600 text-sm font-light">No cookie-cutter solutions here. We create unique,
@@ -343,7 +369,7 @@
 
 
         <!-- Services Mega-list -->
-        <section class="bg-white py-12 border-t border-b border-gray-200">
+        <section class="bg-white py-12 border-t border-b border-gray-200" role="region" aria-label="Services list">
             <div class="container mx-auto px-4">
                 <div
                     class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 md:divide-x md:divide-gray-200 md:-mx-8 lg:grid-cols-4 lg:gap-12 lg:divide-x lg:divide-gray-200 lg:-mx-8">
@@ -351,15 +377,12 @@
                     <div class="md:px-8">
                         <h3 class="text-dark text-lg font-bold mb-6">Design Services</h3>
                         <ul class="space-y-4 text-sm text-text-gray-600">
-                            <li><a href="#" class="hover:text-light-blue transition-colors">UX/UI Design</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Website Design</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Illustration & Icons</a>
-                            </li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Animation & Motion
-                                    Graphics</a>
-                            </li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Branding & Logos</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Marketing Collateral</a>
+                            <li>UX/UI Design</li>
+                            <li>Website Design</li>
+                            <li>Illustration & Icons</li>
+                            <li>Animation & Motion Graphics</li>
+                            <li>Branding & Logos</li>
+                            <li>Marketing Collateral</a>
                             </li>
                         </ul>
                     </div>
@@ -368,14 +391,12 @@
                     <div class="md:px-8">
                         <h3 class="text-dark text-lg font-bold mb-6">Strategy & Planning</h3>
                         <ul class="space-y-4 text-sm text-text-gray-600">
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Design Workshops</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">User Studies & Research</a>
-                            </li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">User Journeys & Personas</a>
-                            </li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Competitor Analysis</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">UX Audits</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Roadmapping</a></li>
+                            <li>Design Workshops</li>
+                            <li>User Studies & Research</li>
+                            <li>User Journeys & Personas</li>
+                            <li>Competitor Analysis</li>
+                            <li>UX Audits</li>
+                            <li>Roadmapping</li>
                         </ul>
                     </div>
 
@@ -383,12 +404,12 @@
                     <div class="md:px-8">
                         <h3 class="text-dark text-lg font-bold mb-6">Systemize</h3>
                         <ul class="space-y-4 text-sm text-text-gray-600">
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Design Systems</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">UI Kit Development</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Tailwind CSS</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">ShopWired</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Shopify</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">WordPress</a></li>
+                            <li>Design Systems</li>
+                            <li>UI Kit Development</li>
+                            <li>Tailwind CSS</li>
+                            <li>ShopWired</li>
+                            <li>Shopify</li>
+                            <li>WordPress</li>
                         </ul>
                     </div>
 
@@ -396,13 +417,11 @@
                     <div class="md:px-8">
                         <h3 class="text-dark text-lg font-bold mb-6">Custom Development</h3>
                         <ul class="space-y-4 text-sm text-text-gray-600">
-                            <li><a href="#" class="hover:text-light-blue transition-colors">HTML/CSS</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">JavaScript / jQuery</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">PHP & Laravel</a></li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">eCommerce Development</a>
-                            </li>
-                            <li><a href="#" class="hover:text-light-blue transition-colors">Web Design & Development</a>
-                            </li>
+                            <li>HTML/CSS</li>
+                            <li>JavaScript / jQuery</li>
+                            <li>PHP & Laravel</li>
+                            <li>eCommerce Development</li>
+                            <li>Web Design & Development</li>
                         </ul>
                     </div>
                 </div>
@@ -410,136 +429,125 @@
         </section>
 
 
-        <!-- CTA: Ready to scale -->
-        <section class="bg-ink py-8 md:py-12">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-white font-extrabold text-3xl md:text-5xl leading-relaxed mb-2">Ready to scale your
-                    business?</h2>
-                <p class="text-white text-base md:text-lg mb-6">Start with a risk‑free trial or choose 30‑day service.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#pricing"
-                        class="inline-flex items-center justify-center rounded-xs bg-white text-dark px-6 md:px-8 py-3 md:py-4 text-sm md:text-base shadow-sm hover:bg-blue hover:text-white transition">
-                        Pricing Plans
-                        <svg class="ml-3 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="inline-flex items-center justify-center rounded-xs border border-white/60 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-base hover:bg-white/10 transition">
-                        7 Day Free Trial
-                        <svg class="ml-3 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
+
+        <!-- Kickoff CTA Section -->
+        <section aria-labelledby="kickoff-title" class="relative overflow-hidden relative bg-blue" role="region">
+            <!-- Blue background with subtle grid -->
+            <div class="relative">
+                <!-- Grid background image overlay -->
+                <div
+                    class="absolute inset-0 bg-[url('images/kickoff-grid.webp')] bg-repeat bg-contain bg-bottom">
                 </div>
+                <div class="container relative mx-auto px-4 py-28 md:py-32 lg:py-36 text-center">
+                    <h2 id="kickoff-title" class="text-white lg:text-[48px]"> Let’s Kick Off Your <br
+                            class="hidden md:block"> Next Project </h2>
+                    <p class="text-white text-base md:text-xl mt-4">Fast. Flexible. Flawless. Book a call to start your
+                        project.</p>
+                    <div class="mt-8 flex items-center justify-center">
+                        <a href="https://cal.com/codeller/intro?overlayCalendar=true" role="button"
+                            class="inline-flex items-center justify-center rounded-xs bg-white text-dark px-6 md:px-8 py-3 md:py-4 hover:bg-ink hover:text-white transition min-w-[231px] font-medium">
+                            <img src="images/google-meet-icon.svg" alt="Google Meet icon" class="mr-3"
+                                loading="lazy" decoding="async" /> Book a Call </a>
+                    </div>
+                    <p class="mt-6 text-white text-base md:text-xl">or send us an email <span class="mx-2">→</span>
+                        <a href="mailto:hi@codeller.com" class="underline underline-offset-2">hi@codeller.com</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Decorative tilted cards -->
+            <div class="pointer-events-none select-none" aria-hidden="true">
+                <!-- Left card -->
+                <img src="images/kickoff-img2.webp" alt="project example"
+                    class="md:block absolute left-0 bottom-0 w-[100px] md:w-[180px] lg:w-[200px] xl:w-auto"
+                    loading="lazy" decoding="async" />
+                <!-- Right card -->
+                <img src="images/kickoff-img1.webp" alt="project example"
+                    class="md:block absolute right-0 top-0 w-[100px] md:w-[180px] lg:w-[200px] xl:w-auto" loading="lazy"
+                    decoding="async" />
             </div>
         </section>
 
 
         <!-- Why Choose Codeller Section -->
-        <section id="why-choose-codeller" class="py-12 md:py-20">
+        <section id="why-choose-codeller" class="py-12 md:py-20" role="region" aria-labelledby="why-choose-heading">
             <div class="container mx-auto px-4">
-                <h2 class="text-white text-center mb-6">Why Choose Codeller?</h2>
+                <h2 id="why-choose-heading" class="text-white text-center mb-6">Why Choose Codeller?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <div>
-                        <div class="overflow-hidden rounded-xs mb-4 aspect-video">
-                            <img src="https://demo.awaikenthemes.com/weebix/wp-content/uploads/2024/04/service-img-1.jpg"
-                                alt="Design team collaborating" class="w-full h-full object-cover">
+                        <div class="overflow-hidden rounded-xs mb-3 aspect-video">
+                            <img src="images/why-codeller/team.webp" alt="Design team collaborating"
+                                class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
-                        <h3 class="text-white text-lg font-bold mb-3">Dedicated design teams</h3>
-                        <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <h3 class="text-white text-lg font-bold mb-1">Dedicated design teams</h3>
+                        <p class="text-gray-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Sed
                             do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div>
-                        <div class="overflow-hidden rounded-xs mb-4 aspect-video">
-                            <img src="https://demo.awaikenthemes.com/weebix/wp-content/uploads/2024/04/service-img-2.jpg"
-                                alt="Designer working on laptop" class="w-full h-full object-cover">
+                        <div class="overflow-hidden rounded-xs mb-3 aspect-video">
+                            <img src="images/why-codeller/reliable.webp" alt="Designer working on laptop"
+                                class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
-                        <h3 class="text-white text-lg font-bold mb-3">Fast, reliable delivery</h3>
-                        <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <h3 class="text-white text-lg font-bold mb-1">Fast, reliable delivery</h3>
+                        <p class="text-gray-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Sed
                             do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div>
-                        <div class="overflow-hidden rounded-xs mb-4 aspect-video">
-                            <img src="https://demo.awaikenthemes.com/weebix/wp-content/uploads/2024/04/service-img-3.jpg"
-                                alt="Budget planning visuals" class="w-full h-full object-cover">
+                        <div class="overflow-hidden rounded-xs mb-3 aspect-video">
+                            <img src="images/why-codeller/pricing.webp" alt="Budget planning visuals"
+                                class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
-                        <h3 class="text-white text-lg font-bold mb-3">Budget friendly</h3>
-                        <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <h3 class="text-white text-lg font-bold mb-1">Transparent Pricing. Tangible Results.</h3>
+                        <p class="text-gray-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Sed
                             do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div>
-                        <div class="overflow-hidden rounded-xs mb-4 aspect-video">
-                            <img src="https://demo2.themelexus.com/konsulix/wp-content/uploads/2024/03/case1-1024x670.jpg"
-                                alt="Team meeting in office" class="w-full h-full object-cover">
+                        <div class="overflow-hidden rounded-xs mb-3 aspect-video">
+                            <img src="images/why-codeller/headache.webp" alt="Team meeting in office"
+                                class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
-                        <h3 class="text-white text-lg font-bold mb-3">No hiring headaches</h3>
-                        <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <h3 class="text-white text-lg font-bold mb-1">No hiring headaches</h3>
+                        <p class="text-gray-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Sed
                             do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div>
-                        <div class="overflow-hidden rounded-xs mb-4 aspect-video">
-                            <img src="https://demo2.themelexus.com/konsulix/wp-content/uploads/2024/03/case11-1024x683.jpg"
-                                alt="Hands holding documents" class="w-full h-full object-cover">
+                        <div class="overflow-hidden rounded-xs mb-3 aspect-video">
+                            <img src="images/why-codeller/ownership.webp" alt="Hands holding documents"
+                                class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
-                        <h3 class="text-white text-lg font-bold mb-3">Full ownership guaranteed</h3>
-                        <p class="text-text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <h3 class="text-white text-lg font-bold mb-1">Full ownership guaranteed</h3>
+                        <p class="text-gray-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Sed
                             do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div>
-                        <div class="overflow-hidden rounded-xs mb-4 aspect-video">
-                            <img src="https://itqore.themeht.com/wp-content/uploads/2025/07/service08-700x600.jpg"
-                                alt="Calendar with flexible terms" class="w-full h-full object-cover">
+                        <div class="overflow-hidden rounded-xs mb-3 aspect-video">
+                            <img src="images/why-codeller/contract.webp" alt="Calendar with flexible terms"
+                                class="w-full h-full object-cover" loading="lazy" decoding="async">
                         </div>
-                        <h3 class="text-white text-lg font-bold mb-3">No contract, cancel anytime</h3>
-                        <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        <h3 class="text-white text-lg font-bold mb-1">No contract, cancel anytime</h3>
+                        <p class="text-gray-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                             do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <section class="md:py-8">
-            <div class="relative container mx-auto px-4 flex flex-col gap-[5rem]">
-                <div class="sticky top-20">
-                    <img src="images/dashboard.jpg" alt="Dashboard" class="max-w-3xl mx-auto rounded-2xl w-full" />
-                </div>
-                <div class="sticky top-20">
-
-                    <img src="images/dashboard.jpg" alt="Dashboard" class="max-w-3xl mx-auto rounded-2xl w-full" />
-
-                </div>
-                <div class="sticky top-20">
-                    <img src="images/dashboard.jpg" alt="Dashboard" class="max-w-3xl mx-auto rounded-2xl w-full" />
-                </div>
-                <div class="sticky top-20">
-                    <img src="images/dashboard.jpg" alt="Dashboard" class="max-w-3xl mx-auto rounded-2xl w-full" />
-                </div>
-            </div>
-        </section>
 
 
         <!-- FAQ Section -->
-        <section id="faqs" class="text-white py-12 md:py-20">
+        <section id="faqs" class="text-white py-12 md:py-20" role="region" aria-labelledby="faq-heading">
             <div class="container mx-auto px-4">
                 <div class="flex justify-between gap-4 md:gap-10 flex-col sm:flex-row">
-                    <h2 class="font-extrabold">Have questions?</h2>
+                    <h2 id="faq-heading" class="font-extrabold">Have questions?</h2>
                     <div class="max-w-3xl">
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-0" role="button"
+                            <button type="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(0)">
+                                aria-expanded="false" aria-controls="answer-0" onclick="toggleFAQ(0)">
                                 <span class="text-base lg:text-lg flex-1">Do you only work with large brands, or start
                                     ups
                                     too?</span>
@@ -548,7 +556,7 @@
                                     <i class="fa-solid fa-arrow-down faq-icon transition-transform duration-300"
                                         id="icon-0"></i>
                                 </span>
-                            </a>
+                            </button>
                             <div class="faq-answer  text-gray-300 overflow-hidden transition-all duration-300 ease-in-out text-sm md:text-base"
                                 id="answer-0" style="max-height: 0;">
                                 <p class="">We work with businesses of all sizes, from startups to enterprise companies.
@@ -557,9 +565,9 @@
                             </div>
                         </div>
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-1" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(1)">
+                                aria-expanded="false" aria-controls="answer-1" onclick="toggleFAQ(1)">
                                 <span class="text-base lg:text-lg flex-1">Can you help make my product
                                     investor-ready?</span>
                                 <span id="circle-1"
@@ -578,9 +586,9 @@
                             </div>
                         </div>
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-2" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(2)">
+                                aria-expanded="false" aria-controls="answer-2" onclick="toggleFAQ(2)">
                                 <span class="text-base lg:text-lg flex-1">How does your agency integrate AI into
                                     design?</span>
                                 <span id="circle-2"
@@ -599,9 +607,9 @@
                             </div>
                         </div>
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-3" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(3)">
+                                aria-expanded="false" aria-controls="answer-3" onclick="toggleFAQ(3)">
                                 <span class="text-base lg:text-lg flex-1">How long does a typical design project
                                     take?</span>
                                 <span id="circle-3"
@@ -620,9 +628,9 @@
                             </div>
                         </div>
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-4" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(4)">
+                                aria-expanded="false" aria-controls="answer-4" onclick="toggleFAQ(4)">
                                 <span class="text-base lg:text-lg flex-1">Do you offer ongoing support after
                                     launch?</span>
                                 <span id="circle-4"
@@ -639,9 +647,9 @@
                             </div>
                         </div>
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-5" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(5)">
+                                aria-expanded="false" aria-controls="answer-5" onclick="toggleFAQ(5)">
                                 <span class="text-base lg:text-lg flex-1">Will I have full ownership of the designs and
                                     assets?</span>
                                 <span id="circle-5"
@@ -658,9 +666,9 @@
                             </div>
                         </div>
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-6" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(6)">
+                                aria-expanded="false" aria-controls="answer-6" onclick="toggleFAQ(6)">
                                 <span class="text-base lg:text-lg flex-1">How do you approach working with technical or
                                     niche products?</span>
                                 <span id="circle-6"
@@ -678,9 +686,9 @@
                             </div>
                         </div>
                         <div class="border-b border-gray-600 py-4 flex flex-col">
-                            <a href="#faq-7" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(7)">
+                                aria-expanded="false" aria-controls="answer-7" onclick="toggleFAQ(7)">
                                 <span class="text-base lg:text-lg flex-1">What makes your agency different from other
                                     design
                                     firms?</span>
@@ -701,9 +709,9 @@
                             </div>
                         </div>
                         <div class="py-4">
-                            <a href="#faq-8" role="button"
+                            <a href="#" role="button"
                                 class="w-full text-left flex justify-between items-center transition-colors"
-                                onclick="toggleFAQ(8)">
+                                aria-expanded="false" aria-controls="answer-8" onclick="toggleFAQ(8)">
                                 <span class="text-base lg:text-lg flex-1">How do we get started with a project?</span>
                                 <span id="circle-8"
                                     class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center transition-colors">
@@ -726,11 +734,12 @@
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="bg-dark text-white pt-12 md:pt-20">
+        <section id="pricing" class="bg-white text-dark pt-12 pb-12 md:pt-20 md:pb-20" role="region"
+            aria-labelledby="pricing-heading">
             <div class="container mx-auto px-4">
                 <!-- Header -->
                 <div class="text-center mb-8">
-                    <h2 class="font-bold mb-3">Choose the plan that's right for your business</h2>
+                    <h2 id="pricing-heading" class="font-bold mb-3">Choose the plan that's right for your business</h2>
                     <p class="text-gray-500 text-base font-light max-w-5xl mx-auto">Need the certainty of a fixed cost?
                         Or
                         the flexibility of a subscription? Our transparent pricing lets you choose the perfect fit for
@@ -742,7 +751,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10 md:mb-16">
                     <!-- Included as Standard Column -->
                     <div class="bg-ink p-6">
-                        <h3 class="text-xl md:text-2xl font-bold mb-6">Included as Standard</h3>
+                        <h3 class="text-xl md:text-2xl font-bold mb-6 text-white">Included as Standard</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start gap-2 text-white">
                                 <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
@@ -797,15 +806,15 @@
                     <!-- Design Subscription Column -->
                     <div class="p-6 border border-[#5C666B]">
                         <h3 class="text-xl md:text-2xl font-bold mb-4">Design Subscription</h3>
-                        <p class="text-white text-sm md:text-base font-light">Get a website that delivers an exceptional
+                        <p class="text-dark text-sm md:text-base font-light">Get a website that delivers an exceptional
                             user
                             experience, driving results and propelling your business forward.</p>
                         <div class="border-b border-[#3B454A] my-4"></div>
                         <div class="mb-6">
                             <span class="text-3xl md:text-4xl font-bold">£3,500</span>
-                            <span class="text-white font-light text-2xl">/per month</span>
+                            <span class="text-dark font-light text-2xl">/per month</span>
                         </div>
-                        <a href="#"
+                        <a href="#" role="button"
                             class="w-full bg-white hover:bg-blue text-gray-900 py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
                             Get Started
                             <i class="fas fa-arrow-right"></i>
@@ -814,23 +823,23 @@
                         <div>
                             <h4 class="text-base font-light mb-4 font-body">What's included</h4>
                             <ul class="space-y-3">
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">Transparent flat monthly
                                         rate</span>
                                 </li>
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">Source files included
                                         (Figma,
                                         PSD, AI, etc.)</span>
                                 </li>
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">Brand-aligned, pixel-perfect
                                         designs</span>
                                 </li>
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">Original designs - no
                                         templates,
@@ -844,15 +853,15 @@
                     <div class="p-6 border border-[#5C666B]">
 
                         <h3 class="text-xl md:text-2xl font-bold mb-4">Design & Development</h3>
-                        <p class="text-white text-sm md:text-base font-light">Get a website that delivers an exceptional
+                        <p class="text-dark text-sm md:text-base font-light">Get a website that delivers an exceptional
                             user
                             experience, driving results and propelling your business forward.</p>
                         <div class="border-b border-[#3B454A] my-4"></div>
                         <div class="mb-6">
                             <span class="text-3xl md:text-4xl font-bold">£6,500</span>
-                            <span class="text-white font-light text-2xl">/per month</span>
+                            <span class="text-dark font-light text-2xl">/per month</span>
                         </div>
-                        <a href="#"
+                        <a href="#" role="button"
                             class="w-full bg-white hover:bg-blue text-gray-900 py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
                             Get Started
                             <i class="fas fa-arrow-right"></i>
@@ -861,22 +870,22 @@
                         <div>
                             <h4 class="text-base font-light mb-4 font-body">What's included</h4>
                             <ul class="space-y-3">
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">Seamless handoff - smoother,
                                         faster delivery</span>
                                 </li>
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">Fully responsive
                                         websites</span>
                                 </li>
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">End-to-end project
                                         ownership</span>
                                 </li>
-                                <li class="flex items-start gap-2 text-white">
+                                <li class="flex items-start gap-2 text-dark">
                                     <i class="fas fa-check flex-shrink-0 relative top-[4px]"></i>
                                     <span class="font-light text-base text-sm md:text-base">Automated testing & bug
                                         fixes</span>
@@ -889,24 +898,33 @@
                 <!-- Feature Blocks -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-lg font-bold mb-3 text-white">Pause Anytime. Keep Unused Credits.</h3>
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/pause.svg" alt="Pause anytime feature icon" width="48"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-lg font-bold mb-1 md:mb-1 text-dark">Pause Anytime. Keep Unused Credits.</h3>
                         <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit.
                             Duis augue sem, gravida sed risus eget, tempor mattis nisi. Proin iaculis cursus ante non
                             posuere. Mauris nec magna et orci.</p>
                     </div>
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-lg font-bold mb-3 text-white">7-Day Money Back Guarantee</h3>
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/money-back.svg" alt="Money back guarantee icon" width="48"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-lg font-bold mb-1 md:mb-1 text-dark">7-Day Money Back Guarantee</h3>
                         <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit.
                             Duis augue sem, gravida sed risus eget, tempor mattis nisi. Proin iaculis cursus ante non
                             posuere. Mauris nec magna et orci.</p>
                     </div>
                     <div class="">
-                        <div class="w-[72px] h-[72px] bg-gray-300 mb-4 rounded"></div>
-                        <h3 class="text-lg font-bold mb-3 text-white">100% Satisfaction Guaranteed</h3>
+                        <div class="w-[48px] h-[48px] mb-3 rounded">
+                            <img src="images/icons/satisfaction.svg" alt="Satisfaction guarantee icon"
+                                width="48" loading="lazy" decoding="async">
+                        </div>
+                        <h3 class="text-lg font-bold mb-1 md:mb-1 text-dark">100% Satisfaction Guaranteed</h3>
                         <p class="text-gray-500 text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit.
                             Duis augue sem, gravida sed risus eget, tempor mattis nisi. Proin iaculis cursus ante non
@@ -917,14 +935,14 @@
         </section>
 
         <!-- Contact/Enquiry Section -->
-        <section id="contact" class="bg-dark text-white py-12 md:py-20">
+        <section id="contact" class="bg-dark text-white py-12 md:py-20" role="region" aria-labelledby="contact-heading">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col lg:flex-row items-start gap-10 justify-between">
                     <!-- Left Column - Information -->
                     <div
                         class="max-w-[519px] mx-auto lg:block flex flex-col items-center justify-center text-center lg:text-left">
                         <div>
-                            <h2 class="font-extrabold mb-4">Enhance Your Brand Potential At No
+                            <h2 id="contact-heading" class="font-extrabold mb-4">Enhance Your Brand Potential At No
                                 Cost!</h2>
                             <p class="text-gray-500 text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -975,13 +993,17 @@
 
                     <!-- Right Column - Enquiry Form -->
                     <div class="max-w-[519px] md:max-w-[658px] mx-auto w-full">
-                        <form class="space-y-4" aria-labelledby="contact-form-title">
+                        <form class="space-y-4" aria-labelledby="contact-form-title" novalidate>
+                            <!-- Error summary for screen readers -->
+                            <div id="form-errors" class="sr-only" aria-live="polite" role="alert"></div>
 
                             <!-- Enquiry Subject -->
                             <div>
-                                <label class="block text-white text-sm font-medium mb-2" for="name">Name</label>
+                                <label class="block text-white text-sm font-medium mb-2" for="name">Name <span
+                                        class="text-red-400" aria-label="required">*</span></label>
                                 <input type="text" id="name" name="name" placeholder="johndoe" class="input-global"
-                                    required>
+                                    required aria-describedby="name-help">
+                                <div id="name-help" class="sr-only">Enter your full name</div>
                             </div>
 
                             <!-- Email and Telephone Row -->
@@ -989,9 +1011,10 @@
                                 <!-- Email Field -->
                                 <div>
                                     <label class="block text-white text-sm font-medium mb-2" for="email">Your
-                                        Email</label>
+                                        Email <span class="text-red-400" aria-label="required">*</span></label>
                                     <input type="email" id="email" name="email" placeholder="john@doe.com"
-                                        class="input-global" required>
+                                        class="input-global" required aria-describedby="email-help">
+                                    <div id="email-help" class="sr-only">Enter a valid email address</div>
                                 </div>
 
                                 <!-- Telephone Number -->
@@ -1049,12 +1072,13 @@
                             <!-- Message -->
                             <div>
                                 <label class="block text-white text-sm font-medium mb-2" for="message">Message</label>
-                                <textarea rows="4" id="message" name="message" placeholder="I want to redesign my website..." class="input-global"></textarea>
+                                <textarea rows="4" id="message" name="message"
+                                    placeholder="I want to redesign my website..." class="input-global"></textarea>
                             </div>
 
                             <!-- Send Enquiry Button -->
                             <button type="submit"
-                                class="bg-white text-gray-900 py-4 px-10 rounded-xs hover:bg-blue transition-colors flex items-center justify-center gap-2 md:w-fit w-full"
+                                class="bg-white text-gray-900 py-4 px-10 rounded-xs hover:bg-blue transition-colors flex items-center justify-center gap-2 md:w-fit w-full focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-dark"
                                 aria-label="Send enquiry">
                                 Send Enquiry
                                 <i class="fas fa-arrow-right"></i>
@@ -1067,9 +1091,9 @@
 
 
         <!-- Footer (Glass card over image) -->
-        <footer class="relative">
+        <footer class="relative mb-16">
             <div class="container mx-auto rounded-2xl overflow-hidden p-6 bg-cover bg-center"
-                style="background-image:url('images/footer-bg.png')">
+                style="background-image:url('assets/images/footer-bg.webp')">
                 <div
                     class="rounded-xl md:rounded-2xl bg-[#0E1414B2] mt-[240px] backdrop-saturate-150 p-6 md:p-8 lg:p-10 relative">
                     <div class="absolute inset-0 rounded-xl md:rounded-2xl bg-[#0E1414B2] filter blur-[124px]"></div>
@@ -1084,16 +1108,20 @@
                                     about
                                     our free resource drops and updates.</p>
                                 <div class="flex flex-col sm:flex-row gap-3 mb-3">
-                                    <input type="text" placeholder="First Name"
+                                    <label for="newsletter-first" class="sr-only">First Name</label>
+                                    <input id="newsletter-first" type="text" placeholder="First Name"
                                         class="text-sm font-medium min-h-[48px] w-full bg-dark/70 text-white placeholder:text-text-gray-500 px-4 py-3 rounded-md ring-1 ring-white/10 focus:ring-2 focus:ring-white/30 focus:outline-none">
-                                    <input type="text" placeholder="Surname"
+                                    <label for="newsletter-last" class="sr-only">Surname</label>
+                                    <input id="newsletter-last" type="text" placeholder="Surname"
                                         class="text-sm font-medium min-h-[48px] w-full sm:w-[220px] bg-dark/70 text-white placeholder:text-text-gray-500 px-4 py-3 rounded-md ring-1 ring-white/10 focus:ring-2 focus:ring-white/30 focus:outline-none">
                                 </div>
                                 <div class="flex items-stretch gap-3 max-w-lg relative">
-                                    <input type="email" placeholder="Email Address"
+                                    <label for="newsletter-email" class="sr-only">Email Address</label>
+                                    <input id="newsletter-email" type="email" placeholder="Email Address"
                                         class="text-sm min-h-[48px] font-medium flex-1 bg-dark/70 text-white placeholder:text-text-gray-500 px-4 py-3 rounded-md ring-1 ring-white/10 focus:ring-2 focus:ring-white/30 focus:outline-none">
-                                    <button aria-label="Subscribe"
-                                        class="absolute right-2 top-2 bottom-2 w-10 rounded-xs bg-white text-dark flex items-center justify-center ring-1 ring-white/20 hover:bg-blue hover:text-dark transition">
+                                    <button
+                                        class="absolute right-2 top-2 bottom-2 w-10 rounded-xs bg-white text-dark flex items-center justify-center ring-1 ring-white/20 hover:bg-blue hover:text-dark transition"
+                                        aria-label="Subscribe to newsletter">
                                         <i class="fa-solid fa-arrow-right"></i>
                                     </button>
                                 </div>
@@ -1123,50 +1151,58 @@
                         <div class="lg:col-span-1">
                             <h4 class="text-white text-lg font-bold mb-4">Get in Touch</h4>
                             <div class="space-y-3 text-white/90 text-sm">
-                                <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-sm bg-white/70"
-                                        aria-hidden="true"></span><span>hi@codeller.com</span></div>
-                                <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-sm bg-white/70"
-                                        aria-hidden="true"></span><span>+44 1902 410 109</span></div>
+                                <div class="flex items-center gap-3"><span
+                                        class="w-6 h-6 rounded-sm bg-white/70"></span><span>hi@codeller.com</span></div>
+                                <div class="flex items-center gap-3"><span
+                                        class="w-6 h-6 rounded-sm bg-white/70"></span><span>+44 1902 410 109</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="h-px bg-white/20 my-6 md:my-8 lg:my-10 relative z-10"></div>
                     <div
                         class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 text-center md:text-left relative z-10">
-                        <div class="text-sm font-medium">Copyright ©2025 Codeller. All Rights
+                        <div class="text-sm font-medium">Copyright ©<time datetime="2025">2025</time> Codeller. All
+                            Rights
                             Reserved.</div>
                         <div class="flex items-center justify-center gap-3 md:mt-0">
-                            <a href=" #" aria-label="Dribbble"
-                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
+                            <a href=" #"
+                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition"
+                                aria-label="Dribbble">
                                 <i class="fa-brands fa-dribbble"></i>
                             </a>
-                            <a href="#" aria-label="Behance"
-                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
+                            <a href="#"
+                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition"
+                                aria-label="Behance">
                                 <i class="fa-brands fa-behance"></i>
                             </a>
-                            <a href="#" aria-label="Instagram"
-                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
+                            <a href="#"
+                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition"
+                                aria-label="Instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
-                            <a href="#" aria-label="LinkedIn"
-                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
+                            <a href="#"
+                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition"
+                                aria-label="LinkedIn">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                            <a href="#" aria-label="X"
-                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
+                            <a href="#"
+                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition"
+                                aria-label="X Twitter">
                                 <i class="fa-brands fa-x-twitter"></i>
                             </a>
-                            <a href="#" aria-label="Facebook"
-                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition">
+                            <a href="#"
+                                class="w-10 h-10 rounded-md bg-white text-dark flex items-center justify-center hover:bg-blue transition"
+                                aria-label="Facebook">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </footer>
     </main>
-
 
     <!-- Mobile Offcanvas Menu -->
     <div id="mobile-offcanvas-backdrop"
@@ -1176,7 +1212,7 @@
         <div class="flex items-center justify-between px-4 py-4 border-b border-white/10">
             <h2 id="mobile-menu-title" class="text-base font-semibold">Menu</h2>
             <a href="#" id="mobile-menu-close" role="button" aria-label="Close menu"
-                class="inline-flex items-center justify-center w-10 h-10 rounded-xs ring-1 ring-white/30 text-white">
+                class="inline-flex items-center justify-center w-10 h-10 rounded-xs ring-1 ring-white/30 text-white focus:ring-2 focus:ring-blue focus:outline-none">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
                     focusable="false">
                     <path
@@ -1186,10 +1222,18 @@
         </div>
         <nav class="px-4 py-4">
             <ul class="space-y-2">
-                <li><a href="#work" class="block px-3 py-2 rounded hover:bg-white/10">Work</a></li>
-                <li><a href="#services" class="block px-3 py-2 rounded hover:bg-white/10">Services</a></li>
-                <li><a href="#faqs" class="block px-3 py-2 rounded hover:bg-white/10">FAQs</a></li>
-                <li><a href="#contact" class="block px-3 py-2 rounded hover:bg-white/10">Contact Us</a></li>
+                <li><a href="#work"
+                        class="block px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue">Work</a>
+                </li>
+                <li><a href="#services"
+                        class="block px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue">Services</a>
+                </li>
+                <li><a href="#faqs"
+                        class="block px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue">FAQs</a>
+                </li>
+                <li><a href="#contact"
+                        class="block px-3 py-2 rounded hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue">Contact
+                        Us</a></li>
             </ul>
         </nav>
     </aside>
@@ -1203,9 +1247,122 @@
     </a>
 
 
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="slick/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-popup"
+        class="fixed bottom-6 left-6 bg-white text-dark rounded-xl shadow-2xl p-5 w-[360px] border border-gray-200 z-50 hidden opacity-0 translate-y-3 transition-all duration-500 ease-out">
+
+        <!-- Main Header -->
+        <h2 class="text-dark font-bold mb-2 text-base">Cookie Settings</h2>
+        <p class="text-sm mb-4 text-gray-600">
+            We use cookies to enhance your experience, analyze site traffic and deliver personalized content.
+            Read our <a href="#" class="text-gray-500 hover:text-black">Cookie Policy</a>.
+        </p>
+
+        <!-- Main Buttons -->
+        <div id="cookie-main-buttons" class="flex justify-between items-center gap-2">
+            <button id="cookie-customize"
+                class="text-sm bg-black text-white px-3 py-2 rounded hover:bg-gray-900 flex-1">
+                Customize
+            </button>
+            <button id="cookie-reject" class="text-sm px-3 py-2 bg-gray-200 hover:bg-gray-300 text-dark rounded flex-1">
+                Reject ALL
+            </button>
+            <button id="cookie-accept" class="text-sm bg-black text-white px-3 py-2 rounded hover:bg-gray-900 flex-1">
+                Accept ALL
+            </button>
+        </div>
+
+        <!-- Hidden Customize Panel -->
+        <div id="cookie-custom-panel" class="hidden mt-3 space-y-4">
+            <div class="space-y-2">
+
+                <!-- ✅ Essential (Always Active, Non-toggleable) -->
+                <div class="flex items-center justify-between bg-gray-100 rounded-xl p-3">
+                    <div>
+                        <h4 class="font-semibold text-sm text-dark mb-1">Essential</h4>
+                        <p class="text-xs text-gray-600">Enables security and basic functionality.</p>
+                    </div>
+                    <div class="relative inline-flex items-center cursor-not-allowed opacity-90 select-none">
+                        <input type="checkbox" checked disabled class="sr-only"
+                            aria-label="Essential cookies always enabled">
+                        <div class="w-10 h-5 bg-black rounded-full"></div>
+                        <div
+                            class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow transform translate-x-5">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center justify-between bg-gray-100 rounded-xl p-3">
+                    <div>
+                        <h4 class="font-semibold text-sm text-dark mb-1">Analytics</h4>
+                        <p class="text-xs text-gray-600">Enables tracking of performance.</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-analytics" class="sr-only peer">
+                        <div
+                            class="w-10 h-5 bg-gray-300 peer-focus:ring-2 peer-focus:ring-gray-400 rounded-full peer-checked:bg-black transition-colors">
+                        </div>
+                        <div
+                            class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform peer-checked:translate-x-5">
+                        </div>
+                    </label>
+                </div>
+
+                <div class="flex items-center justify-between bg-gray-100 rounded-xl p-3">
+                    <div>
+                        <h4 class="font-semibold text-sm text-dark mb-1">Marketing</h4>
+                        <p class="text-xs text-gray-600">Enables ads personalization and tracking.</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-marketing" class="sr-only peer">
+                        <div
+                            class="w-10 h-5 bg-gray-300 peer-focus:ring-2 peer-focus:ring-gray-400 rounded-full peer-checked:bg-black transition-colors">
+                        </div>
+                        <div
+                            class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform peer-checked:translate-x-5">
+                        </div>
+                    </label>
+                </div>
+
+                <div class="flex items-center justify-between bg-gray-100 rounded-xl p-3">
+                    <div>
+                        <h4 class="font-semibold text-sm text-dark mb-1">Functional</h4>
+                        <p class="text-xs text-gray-600">Enables ads personalization and tracking.</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-functional" class="sr-only peer">
+                        <div
+                            class="w-10 h-5 bg-gray-300 peer-focus:ring-2 peer-focus:ring-gray-400 rounded-full peer-checked:bg-black transition-colors">
+                        </div>
+                        <div
+                            class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform peer-checked:translate-x-5">
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Save Button -->
+            <button id="cookie-save" class="w-full mt-3 bg-black text-white text-sm py-2 rounded hover:bg-gray-900">
+                Save Preferences
+            </button>
+        </div>
+    </div>
+
+    <!-- ✅ Cookie Settings Floating Button -->
+    <button id="cookie-settings-btn" class="fixed bottom-6 left-6 z-40 mix-blend-difference"
+        aria-label="Cookie settings">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="white">
+            <path
+                d="M164.49,163.51a12,12,0,1,1-17,0A12,12,0,0,1,164.49,163.51Zm-81-8a12,12,0,1,0,17,0A12,12,0,0,0,83.51,155.51Zm9-39a12,12,0,1,0-17,0A12,12,0,0,0,92.49,116.49Zm48-1a12,12,0,1,0,0,17A12,12,0,0,0,140.49,115.51ZM232,128A104,104,0,1,1,128,24a8,8,0,0,1,8,8,40,40,0,0,0,40,40,8,8,0,0,1,8,8,40,40,0,0,0,40,40A8,8,0,0,1,232,128Zm-16.31,7.39A56.13,56.13,0,0,1,168.5,87.5a56.13,56.13,0,0,1-47.89-47.19,88,88,0,1,0,95.08,95.08Z">
+            </path>
+        </svg>
+    </button>
+
+    <!-- Deferred JavaScript loading for better performance -->
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="slick/slick.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 
 </body>
 

@@ -30,7 +30,21 @@
   font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Variable.woff2') format('woff2-variations'),
+       url('/fonts/Roboto-Variable.woff') format('woff-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ensure focus-within border override wins after utilities */
+@layer utilities {
+  .telephone-container:focus-within { border-color: #B7B8B8 !important; }
+}
+
 
 /* Custom component styles */
 @layer components {
@@ -42,10 +56,9 @@
   .figma-fab .icon-hover { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transform: translateY(-120%); opacity: 0; }
   .figma-fab-inner:hover .icon-default { transform: translateY(120%); opacity: 0; }
   .figma-fab-inner:hover .icon-hover { transform: translateY(0); opacity: 1; }
-
   /* Sticky header styles */
   .header-sticky-placeholder { height: var(--header-height, 72px); }
-  
+
   .site-header {
     position: sticky;
     top: 0;
@@ -53,16 +66,16 @@
     transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
     will-change: transform;
   }
-  .site-header.is-stuck > .container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .site-header.is-hidden { transform: translateY(-100%); }
+
   .site-header.is-hidden { transform: translateY(-100%); }
   .site-header.is-stuck {
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     backdrop-filter: saturate(140%) blur(6px);
     min-height: 70px;
+  }
+  .site-header.is-stuck > .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .btn-primary {
     @apply bg-light-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center;
@@ -216,3 +229,52 @@
 
 
 
+/* Cookie Popup */
+#cookie-popup {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#cookie-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* optional fade-out delay for smoother hiding */
+#cookie-popup.hide {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; border-right-color: #fff; }
+  to { width: 100%; border-right-color: transparent; }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+@layer components {
+  .animate-fadeInUp {
+    animation: fadeInUp 0.4s ease forwards;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

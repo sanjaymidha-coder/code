@@ -45,7 +45,7 @@ module.exports = {
         'lg': '0.5rem',   // 8px
       },
       backgroundImage: {
-        'hero-pattern': "url('/images/hero-pattren.png')",
+        'hero-pattern': "url('images/hero-pattren.webp')",
       },
       backgroundPosition: {
         'center-bottom': 'center bottom',
