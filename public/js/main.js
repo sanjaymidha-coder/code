@@ -18,7 +18,7 @@ function toggleFAQ(index) {
     if (otherIcon) {
       otherIcon.classList.remove('open', 'text-dark');
       otherIcon.classList.add('text-white');
-    }
+    } 
     if (otherCircle) {
       otherCircle.classList.remove('bg-blue', 'text-dark');
       otherCircle.classList.add('bg-ink', 'text-white');
